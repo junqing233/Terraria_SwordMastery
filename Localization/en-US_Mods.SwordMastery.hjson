@@ -1,0 +1,1164 @@
+Buffs: {
+	BuffsFlyingIronBroadsword: {
+		DisplayName: Flying Iron Broadsword
+		Description: Flying Iron Broadsword will fight for you
+	}
+
+	BuffsFlyingSilverBroadsword: {
+		DisplayName: Flying Silver Broadsword
+		Description: Flying Silver Broadsword will fight for you
+	}
+
+	BuffsFlyingGoldBroadsword: {
+		DisplayName: Flying Gold Broadsword
+		Description: Flying Gold Broadsword will fight for you
+	}
+
+	BuffsFlyingLightsBane: {
+		DisplayName: Flying Lights Bane
+		Description: Flying Lights Bane will fight for you
+	}
+
+	BuffsFlyingBloodButcherer: {
+		DisplayName: Flying Blood Butcherer
+		Description: Flying Blood Butcherer will fight for you
+	}
+
+	BuffsFlyingBladeofGrass: {
+		DisplayName: Flying Bladeof Grass
+		Description: Flying Bladeof Grass will fight for you
+	}
+
+	BuffsFlyingBeeKeeper: {
+		DisplayName: Flying Bee Keeper
+		Description: Flying Bee Keeper will fight for you
+	}
+
+	BuffsFlyingStarfury: {
+		DisplayName: Flying Starfury
+		Description: Flying Starfury will fight for you
+	}
+
+	BuffsFlyingEnchantedSword: {
+		DisplayName: Flying Enchanted Sword
+		Description: Flying Enchanted Sword will fight for you
+	}
+
+	BuffsFlyingIceBlade: {
+		DisplayName: Flying Ice Blade
+		Description: Flying Ice Blade will fight for you
+	}
+
+	BuffsFlyingFieryGreatsword: {
+		DisplayName: Flying Fiery Greatsword
+		Description: Flying Fiery Greatsword will fight for you
+	}
+
+	BuffsFlyingBoneSword: {
+		DisplayName: Flying Bone Sword
+		Description: Flying Bone Sword will fight for you
+	}
+
+	BuffsFlyingBoneSword_: {
+		DisplayName: Unforgettable
+		Description: Reduces the enemy's defense by 1 and stacks infinitely
+	}
+
+	BuffsFlyingTerragrim: {
+		DisplayName: Flying Terragrim
+		Description: Flying Terragrim will fight for you
+	}
+
+	BuffsFlyingNightsEdge: {
+		DisplayName: Flying Nights Edge
+		Description: Flying Nights Edge will fight for you
+	}
+
+	BuffsDemonBlade: {
+		DisplayName: Demon Blade
+		Description: Demon Blade will fight for you
+	}
+
+	BuffsFlyingLeadBroadsword: {
+		DisplayName: Flying Lead Broadsword
+		Description: Flying Lead Broadsword will fight for you
+	}
+
+	BuffsFlyingPlatinumBroadsword: {
+		DisplayName: Flying Platinum Broadsword
+		Description: Flying Platinum Broadsword will fight for you
+	}
+
+	BuffsFlyingTungstenBroadsword: {
+		DisplayName: Flying Tungsten Broadsword
+		Description: Flying Tungsten Broadsword will fight for you
+	}
+
+	BuffsFlyingCobaltSword: {
+		DisplayName: Flying Cobalt Sword
+		Description: Flying Cobalt Sword will fight for you
+	}
+
+	BuffsDemonBladAddRecipes: {
+		DisplayName: The sacrifice of Longkui
+		Description: Brother, after a thousand years, Longkui is finally able to assist you.
+	}
+
+	BuffsFlyingPalladiumSword: {
+		DisplayName: Flying Palladium Sword
+		Description: Flying Palladium Sword will fight for you
+	}
+
+	BuffsFlyingMuramasa: {
+		DisplayName: Flying Muramasa
+		Description: Flying Muramasa will fight for you
+	}
+
+	BuffsFlyingMythrilSword: {
+		DisplayName: Flying Mythril Sword
+		Description: Flying Mythril Sword will fight for you
+	}
+
+	BuffsFlyingOrichalcumSword: {
+		DisplayName: Flying Orichalcum Sword
+		Description: Flying Orichalcum Sword will fight for you
+	}
+
+	BuffsFlyingTitaniumSword: {
+		DisplayName: Flying Titanium Sword
+		Description: Flying Titanium Sword will fight for you
+	}
+
+	BuffsFlyingAdamantiteSword: {
+		DisplayName: Flying Adamantite Sword
+		Description: Flying Adamantite Sword will fight for you
+	}
+
+	BuffsFlyingExcalibur: {
+		DisplayName: Flying Excalibur
+		Description: Flying Excalibur will fight for you
+	}
+
+	BuffsFlyingTrueExcalibur: {
+		DisplayName: Flying True Excalibur
+		Description: Flying True Excalibur will fight for you
+	}
+
+	BuffsFlyingTrueNightsEdge: {
+		DisplayName: Flying True Nights Edge
+		Description: Flying True Nights Edge will fight for you
+	}
+
+	BuffsFlyingTerraBlade: {
+		DisplayName: Flying Terra Blade
+		Description: Flying Terra Blade will fight for you
+	}
+
+	BuffsFlyingsword: {
+		DisplayName: Scabbard
+		Description: The sword is out, and the soul is destroyed......
+	}
+
+	BuffsFlyingGun: {
+		DisplayName: Arsenal
+		Description: It's just amazing!
+	}
+
+	BuffsMagicSachet: {
+		DisplayName: Magic Sachet
+		Description: Magic gives it a soul ......
+	}
+
+	BuffsMountBadge: {
+		DisplayName: Mount Badge
+		Description: Weapons can be turned into mounts!
+	}
+
+	BuffsFlyingSeedler: {
+		DisplayName: Flying Seedler
+		Description: Flying Seedler will fight for you
+	}
+
+	BuffsFlyingTizonaSword: {
+		DisplayName: Flying Tizona Sword
+		Description: Flying Tizona Sword will fight for you
+	}
+
+	BuffsFlyingTheHorsemansBlade: {
+		DisplayName: Flying The Horsemans Blade
+		Description: Flying The Horsemans Blade will fight for you
+	}
+
+	BuffsFlyingInfluxWaver: {
+		DisplayName: Flying Influx Waver
+		Description: Flying Influx Waver will fight for you
+	}
+
+	BuffsFlyingStarWrath: {
+		DisplayName: Flying Star Wrath
+		Description: Flying Star Wrath will fight for you
+	}
+
+	BuffsFlyingMeowmere: {
+		DisplayName: Flying Meowmere
+		Description: Flying Meowmere will fight for you
+	}
+
+	BuffsFlyingZenith: {
+		DisplayName: Flying Zenith
+		Description: Flying Zenith will fight for you
+	}
+
+	BuffsDemonSuppressingSword: {
+		DisplayName: Demon Suppressing Sword
+		Description: Demon Suppressing Sword will fight for you
+	}
+
+	WhipAdvancedDebuff: {
+		DisplayName: Whip Advanced Debuff
+		Description: Mods.SwordMastery.Buffs.WhipAdvancedDebuff.Description
+	}
+
+	WhipDebuff: {
+		DisplayName: Whip Debuff
+		Description: Mods.SwordMastery.Buffs.WhipDebuff.Description
+	}
+
+	BuffsSpringFestivalElf: {
+		DisplayName: Spring Festival Elf
+		Description: Spring Festival Elf will fight for you
+	}
+
+	BuffsDivineMelody: {
+		DisplayName: Divine Blessing
+		Description: Greatly increases defense, life regeneration, movement speed, damage, and armor penetration.
+	}
+
+	BuffsRavageCrab: {
+		DisplayName: Buffs Ravage Crab
+		Description: Mods.SwordMastery.Buffs.BuffsRavageCrab.Description
+	}
+}
+
+Items: {
+	FlyingIronBroadsword: {
+		DisplayName: Flying Iron Broadsword
+		Tooltip: ""
+	}
+
+	FlyingSilverBroadsword: {
+		DisplayName: Flying Silver Broadsword
+		Tooltip: ""
+	}
+
+	FlyingGoldBroadsword: {
+		DisplayName: Flying Gold Broadsword
+		Tooltip: ""
+	}
+
+	FlyingLightsBane: {
+		DisplayName: Flying Lights Bane
+		Tooltip:
+			'''
+			"Magic Lights Sword Yu" attacks the enemy
+			Triggers a Dark Slash attack
+			'''
+	}
+
+	FlyingBloodButcherer: {
+		DisplayName: Flying Blood Butcherer
+		Tooltip:
+			'''
+			"Flying Blood Butcherer" attacks the enemy
+			Triggers the "Bloody Slaughter" effect
+			'''
+	}
+
+	FlyingBladeofGrass: {
+		DisplayName: Flying Bladeof Grass
+		Tooltip:
+			'''
+			"Flying Bladeof Grass" attacks the enemy
+			Triggers a leaf blade attack
+			'''
+	}
+
+	FlyingBeeKeeper: {
+		DisplayName: Flying Bee Keeper
+		Tooltip:
+			'''
+			"Flying Bee Keeper" attacks the enemy
+			Triggers a killer bee attack
+			25% confusion effect
+			'''
+	}
+
+	FlyingStarfury: {
+		DisplayName: Flying Starfury
+		Tooltip:
+			'''
+			"Flying Starfury" attacks the enemy
+			33% triggers star attacks
+			'''
+	}
+
+	FlyingEnchantedSword: {
+		DisplayName: Flying Enchanted Sword
+		Tooltip:
+			'''
+			"Flying Enchanted Sword" attacks the enemy
+			Triggers a sword attack
+			'''
+	}
+
+	FlyingIceBlade: {
+		DisplayName: Flying Ice Blade
+		Tooltip:
+			'''
+			When the "Flying Ice Blade" flies
+			Triggers an ice arrow attack
+			'''
+	}
+
+	FlyingFieryGreatsword: {
+		DisplayName: Flying Fiery Greatsword
+		Tooltip:
+			'''
+			"Flying Fiery Greatsword" attacks the enemy
+			Triggers an explosive attack
+			'''
+	}
+
+	FlyingBoneSword: {
+		DisplayName: Flying Bone Sword
+		Tooltip:
+			'''
+			"Flying Bone Sword" attacks the enemy
+			Reduces enemy defense by 1
+			Lasts 2 seconds
+			stackable
+			'''
+	}
+
+	FlyingTerragrim: {
+		DisplayName: Flying Terragrim
+		Tooltip:
+			'''
+			"Flying Terragrim" attacks enemies
+			Triggers a cutting attack
+			'''
+	}
+
+	FlyingNightsEdge: {
+		DisplayName: Flying Nights Edge
+		Tooltip:
+			'''
+			"Flying Nights Edge" attacks the enemy
+			Triggers the Luminous Slash attack
+			'''
+	}
+
+	DemonBlade: {
+		DisplayName: Demon Blade
+		Tooltip:
+			'''
+			"Demon Blade" attacks the enemy
+			80% triggers demonic attacks
+			Demonic energy comes with a blood-stealing effect
+			'''
+	}
+
+	BladeForge: {
+		DisplayName: Blade Forge
+		Tooltip: ""
+	}
+
+	FlyingLeadBroadsword: {
+		DisplayName: Flying Lead Broadsword
+		Tooltip: ""
+	}
+
+	FlyingPlatinumBroadsword: {
+		DisplayName: Flying Platinum Broadsword
+		Tooltip: ""
+	}
+
+	FlyingTungstenBroadsword: {
+		DisplayName: Flying Tungsten Broadsword
+		Tooltip: ""
+	}
+
+	FlyingCobaltSword: {
+		DisplayName: Flying Cobalt Sword
+		Tooltip:
+			'''
+			"Flying Cobalt Sword" attacks the enemy
+			Triggers a cobalt solo slash attack
+			+10% Whip Attack Speed
+			Lasts 2 seconds
+			'''
+	}
+
+	LongkuiVoodooDoll: {
+		DisplayName: Longkui Voodoo Doll
+		Tooltip: ""
+	}
+
+	RemoveLightStone: {
+		DisplayName: Remove Light Stone
+		Tooltip: Disassemble the essence obtained from a special blade
+	}
+
+	FlyingPalladiumSword: {
+		DisplayName: Flying Palladium Sword
+		Tooltip:
+			'''
+			"Flying Pygmy Necklace" attacks the enemy
+			Triggers a Palladium Stone attack
+			50% triggers a quick healing effect
+			Lasts 2 seconds
+			'''
+	}
+
+	FlyingMuramasa: {
+		DisplayName: Flying Muramasa
+		Tooltip:
+			'''
+			"Muramasa" attacks the enemy
+			Triggers a Lanzhan attack
+			'''
+	}
+
+	FlyingMythrilSword: {
+		DisplayName: Flying Mythril Sword
+		Tooltip:
+			'''
+			"Flying Mythril Sword" attacks the enemy
+			Triggers the Petal Dance attack
+			+20 Whip Penetration
+			Lasts 2 seconds
+			'''
+	}
+
+	FlyingOrichalcumSword: {
+		DisplayName: Flying Orichalcum Sword
+		Tooltip:
+			'''
+			"Flying Orichalcum Sword" attacks the enemy
+			Triggers the Petal Dance attack
+			+20 Whip Penetration
+			Lasts 2 seconds
+			'''
+	}
+
+	FlyingTitaniumSword: {
+		DisplayName: Flying Titanium Sword
+		Tooltip:
+			'''
+			"Flying Titanium Sword" attacks the enemy
+			Titanium barrier effect
+			(Expires when wearing a titanium set)
+			(1 sword/5 titanium shards)
+			+10% Endurance
+			+10% Whip Damage
+			Lasts 2 seconds
+			'''
+	}
+
+	FlyingAdamantiteSword: {
+		DisplayName: Flying Adamantite Sword
+		Tooltip:
+			'''
+			"Flying Adamantite Sword" attacks the enemy
+			Triggers the Adamantium Guard effect
+			Wielding a whip weapon, the guards will open fire
+			(3 imperial guards for the first sword, 1 sword for the rest / 1 imperial guard)
+			+10% Whip Attack Speed
+			+10% Movement Speed
+			Lasts 2 seconds
+			'''
+	}
+
+	FlyingExcalibur: {
+		DisplayName: Flying Excalibur
+		Tooltip:
+			'''
+			"Flying Excalibur" attacks the enemy
+			Triggers the Steel Slash attack
+			+10% Whip Range
+			+10% Summon Damage
+			Lasts 2 seconds
+			'''
+	}
+
+	FlyingTrueExcalibur: {
+		DisplayName: Flying True Excalibur
+		Tooltip:
+			'''
+			"Flying True Excalibur" attacks enemies
+			Triggers the True Steel Slash attack
+			 15% Whip Range
+			 15% Summon Damage
+			Lasts 2 seconds
+			'''
+	}
+
+	FlyingTrueNightsEdge: {
+		DisplayName: Flying True Nights Edge
+		Tooltip:
+			'''
+			"Flying True Nights Edge" when flying and attacking
+			Triggers the Aurora Spinning Slash and Luminous Micro Slash attacks
+			+15% Whip Attack Speed
+			+15% Whip Damage
+			Lasts 2 seconds
+			'''
+	}
+
+	FlyingTerraBlade: {
+		DisplayName: Flying Terra Blade
+		Tooltip:
+			'''
+			"Flying Terra Blade" when flying and attacking
+			Triggers Terra Light Slash and Terra Blade Slash attacks
+			+20% Summon Damage
+			+20% Whip Damage
+			+20% Whip attack Speed
+			+20% Whip Range
+			Lasts 2 seconds
+			'''
+	}
+
+	Flyingsword: {
+		DisplayName: Scabbard
+		Tooltip: Right-click to open the scabbard
+	}
+
+	FlyingGun: {
+		DisplayName: Arsenal
+		Tooltip: Right-click to open the arsenal
+	}
+
+	Quiver: {
+		DisplayName: Quiver
+		Tooltip: When using a bow weapon, fire an additional wooden arrow
+	}
+
+	FlameCross: {
+		DisplayName: Flame Tombstone
+		Tooltip:
+			'''
+			Left click to throw the tombstone in your backpack
+			Tombstones can hurt anyone
+			Right-click to quickly recover the tombstone
+			'''
+	}
+
+	MasterSword: {
+		DisplayName: Master Sword
+		Tooltip: ""
+	}
+
+	MagicSachet: {
+		DisplayName: Magic Sachet
+		Tooltip: Right-click to open the magic sachet
+	}
+
+	MountBadge: {
+		DisplayName: Mount Badge
+		Tooltip: ""
+	}
+
+	FlyingSeedler: {
+		DisplayName: Flying Seedler
+		Tooltip:
+			'''
+			When the "Flying Seedler" flies
+			Trigger seed attack
+			+10% summon damage
+			+25% Movement Speed
+			Lasts 2 seconds
+			'''
+	}
+
+	FlyingTizonaSword: {
+		DisplayName: Flying Tizona Sword
+		Tooltip:
+			'''
+			"Flying Tizona Sword" when flying and attacking
+			Trigger Tizona Light Slash and Tizona Spin Slash attacks
+			+15% damage reduction
+			+15% defense
+			Lasts 2 seconds   
+			'''
+	}
+
+	FlyingTheHorsemansBlade: {
+		DisplayName: Flying The Horsemans Blade
+		Tooltip:
+			'''
+			"Flying The Horsemans Blade" when flying and attacking
+			Trigger the attack of the Headless Horseman with the Light Saber and the Pumpkin Head
+			+15% summon damage
+			+15 armor penetration
+			Lasts for 2 seconds   
+			'''
+	}
+
+	FlyingInfluxWaver: {
+		DisplayName: Flying Influx Waver
+		Tooltip:
+			'''
+			"Flying Influx Waver" attacks the enemy
+			Trigger wave sword energy attack
+			+15% summon damage
+			+20 armor penetration
+			Lasts 2 seconds   
+			'''
+	}
+
+	FlyingStarWrath: {
+		DisplayName: Flying Star Wrath
+		Tooltip:
+			'''
+			"Flying Star Wrath" attacks the enemy
+			Trigger Crazy Star Attack
+			+15% summon damage
+			+25% movement speed
+			Lasts 2 seconds
+			'''
+	}
+
+	FlyingMeowmere: {
+		DisplayName: Flying Meowmere
+		Tooltip:
+			'''
+			When attacking "Flying Meowmere" attacks the enemy
+			Triggers a rainbow cat attack
+			+20% summon damage
+			Lasts 2 seconds
+			'''
+	}
+
+	FlyingZenith: {
+		DisplayName: Flying Zenith
+		Tooltip:
+			'''
+			When "Zenith Sword·Yu" attacks
+			Triggers all Mitsurugi's powers
+			'''
+	}
+
+	DemonSuppressingSword: {
+		DisplayName: Demon Suppressing Sword
+		Tooltip:
+			'''
+			When attacking with "Demon Suppressing Sword"
+			50% probability of triggering Little Sword Spirit
+			Killing the target will restore 20% of the player's health. The more swords summoned, the more health will be restored.
+			There is a very low probability of triggering the "kill" effect. The lower the enemy's HP percentage, the greater the probability.
+			'''
+	}
+
+	SpringSpirit: {
+		DisplayName: Spring Spirit
+		Tooltip:
+			'''
+			It has the purest spiritual waves in the world, which can illuminate a person's heart and soul
+			A villain shows his timidity, but a gentleman shows his magnanimity, which is called "Zhao Bing"
+			(Holy Spirit Environment Blood Moon Fishing)
+			'''
+	}
+
+	StarfuryWhip: {
+		DisplayName: Starfury Whip
+		Tooltip: wrath from heaven
+	}
+
+	FlameCross_Acc: {
+		DisplayName: Flame Cross
+		Tooltip: ""
+	}
+
+	TianjingSword: {
+		DisplayName: Tianjing Sword
+		Tooltip: You can find it in an egg
+	}
+
+	TianjingSword_0: {
+		DisplayName: Icy Tianjing Sword
+		Tooltip: Tianjing Sword absorbs energy near the Crystal Tower in the snowfield
+	}
+
+	TianjingSword_1: {
+		DisplayName: Flame Tianjing Sword
+		Tooltip: Tianjing Sword absorbs energy near the Desert Crystal Tower
+	}
+
+	TianjingSword_2: {
+		DisplayName: Violet Lightning Tianjing Sword
+		Tooltip: Tianjing Sword absorbs energy near the Crystal Tower in the cave
+	}
+
+	TianjingSword_3: {
+		DisplayName: Whirlwind Tianjing Sword
+		Tooltip: Tianjing Sword absorbs energy near the Jungle Crystal Tower
+	}
+
+	TianjingZiSword: {
+		DisplayName: Tianjing Zi Sword
+		Tooltip:
+			'''
+			When your attack hits an enemy,
+			there is a chance to summon a pink dragon.
+			'''
+	}
+
+	Matchbox: {
+		DisplayName: Matchbox
+		Tooltip: ""
+	}
+
+	TianjingSword_4: {
+		DisplayName: Shadow Tianjing Sword
+		Tooltip: Tianjing Sword was copied through the Void Mirror.
+	}
+
+	TianjingSword_5: {
+		DisplayName: Bright Crystal Tianjing Sword
+		Tooltip: Tianjing Sword absorbs energy near the Holy Crystal Tower
+	}
+
+	VoidMirrorItem: {
+		DisplayName: Void Mirror
+		Tooltip: All things return to the void~
+	}
+
+	TianjingSword_6: {
+		DisplayName: Rainbow Crystal Sword
+		Tooltip: ""
+	}
+
+	VoidFirmamentYoyo: {
+		DisplayName: Void Firmament Yoyo
+		Tooltip:
+			'''
+			Attacks slightly attract nearby monsters
+			(Fishing at the beach)
+			'''
+	}
+
+	ShennongRuler: {
+		DisplayName: Shennong Ruler
+		Tooltip:
+			'''
+			Restores 40%~80% of your max health
+			Cooldown: 20~40 seconds
+			'''
+	}
+
+	DivineMelody: {
+		DisplayName: Divine Melody
+		Tooltip:
+			'''
+			Removes all debuffs from the player
+			Greatly increases defense, life regeneration, movement speed, damage, and armor penetration
+			'''
+	}
+
+	AllCreationFalls: {
+		DisplayName: All Creation Falls
+		Tooltip:
+			'''
+			Slowly fires ten lasers to destroy enemies.
+			Can be placed with right-click; after placement, click the weapon to fire lasers.
+			'''
+	}
+
+	PhoenixEmperorAxe: {
+		DisplayName: Phoenix Emperor Axe
+		Tooltip: Attacks can knock back enemies and inflict the Frostburn effect.
+	}
+
+	RavageCrab: {
+		DisplayName: Ravage Crab
+		Tooltip: ""
+	}
+
+	HeavenlyPunishment: {
+		DisplayName: Heavenly Punishment
+		Tooltip: Shoot 9 arrows at once
+	}
+
+	TigerVigor: {
+		DisplayName: Tiger Vigor
+		Tooltip: ""
+	}
+
+	DivineFireBeast: {
+		DisplayName: Divine Fire Beast
+		Tooltip:
+			'''
+			Left-click attacks have a chance to ignite enemies.
+			Right-click throws the weapon, which can stick to blocks (with a chance to stick to platforms) or enemies.
+			While the weapon is out, left-click can recall it, and right-click can teleport you near the weapon and recall it.
+			After recalling the weapon, your next left-click attack is empowered.
+			'''
+	}
+}
+
+Projectiles: {
+	FlyingIronBroadswordProj.DisplayName: Flying Iron Broadsword Proj
+	FlyingSilverBroadswordProj.DisplayName: Flying Silver Broadsword Proj
+	FlyingGoldBroadswordProj.DisplayName: Flying Gold Broadsword Proj
+	FlyingLightsBaneProj.DisplayName: Flying Lights Bane Proj
+	FlyingBloodButchererProj.DisplayName: Flying Blood Butcherer Proj
+	FlyingBladeofGrassProj.DisplayName: Flying Bladeof Grass Proj
+	FlyingBeeKeeperProj.DisplayName: Flying Bee Keeper Proj
+	FlyingStarfuryProj.DisplayName: Flying Starfury Proj
+	FlyingEnchantedSwordProj.DisplayName: Flying Enchanted Sword Proj
+	FlyingEnchantedSwordProj_.DisplayName: Flying Enchanted Sword Proj_
+	FlyingIceBladeProj.DisplayName: Flying Ice Blade Proj
+	FlyingFieryGreatswordProj.DisplayName: Flying Fiery Greatsword Proj
+	FlyingBoneSwordProj.DisplayName: Flying Bone Sword Proj
+	FlyingTerragrimProj.DisplayName: Flying Terragrim Proj
+	FlyingTerragrimProj_.DisplayName: Flying Terragrim Proj_
+	FlyingNightsEdgeProj.DisplayName: Flying Nights Edge Proj
+	FlyingNightsEdgeProj_.DisplayName: Flying Nights Edge Proj_
+	DemonBladeProj.DisplayName: Demon Blade Proj
+	DemonBlade_Swing.DisplayName: Demon Blade_ Swing
+	DemonBladeProj_.DisplayName: Demon Blade Proj_
+	DemonBladeProj_R.DisplayName: Demon Blade Proj_ R
+	FlyingLeadBroadswordProj.DisplayName: Flying Lead Broadsword Proj
+	FlyingPlatinumBroadswordProj.DisplayName: Flying Platinum Broadsword Proj
+	FlyingTungstenBroadswordProj.DisplayName: Flying Tungsten Broadsword Proj
+	FlyingCobaltSwordProj.DisplayName: Flying Cobalt Sword Proj
+	FlyingCobaltSwordProj_P.DisplayName: Flying Cobalt Sword Proj_ P
+	FlyingPalladiumSwordProj.DisplayName: Flying Palladium Sword Proj
+	FlyingPalladiumSwordProj_P.DisplayName: Flying Palladium Sword Proj_ P
+	FlyingMuramasaProj.DisplayName: Flying Muramasa Proj
+	FlyingMythrilSwordProj.DisplayName: Flying Mythril Sword Proj
+	FlyingMythrilSwordProj_P.DisplayName: Flying Mythril Sword Proj_ P
+	FlyingOrichalcumSwordProj.DisplayName: Flying Orichalcum Sword Proj
+	FlyingOrichalcumSwordProj_P.DisplayName: Flying Orichalcum Sword Proj_ P
+	FlyingTitaniumSwordProj.DisplayName: Flying Titanium Sword Proj
+	FlyingAdamantiteSwordProj.DisplayName: Flying Adamantite Sword Proj
+	FlyingAdamantiteSwordProj_P.DisplayName: Flying Adamantite Sword Proj_ P
+	FlyingExcaliburProj.DisplayName: Flying Excalibur Proj
+	FlyingExcaliburProj_P.DisplayName: Flying Excalibur Proj_ P
+	FlyingTrueExcaliburProj.DisplayName: Flying True Excalibur Proj
+	FlyingTrueExcaliburProj_P.DisplayName: Flying True Excalibur Proj_ P
+	FlyingTrueNightsEdgeProj.DisplayName: Flying True Nights Edge Proj
+	FlyingTrueNightsEdgeProj_P.DisplayName: Flying True Nights Edge Proj_ P
+	FlyingTerraBladeProj.DisplayName: Flying Terra Blade Proj
+	FlyingTerraBladeProj_P.DisplayName: Flying Terra Blade Proj_ P
+	FlyingTerraBladeProj_P_.DisplayName: Flying Terra Blade Proj_ P_
+	FlyingswordProj.DisplayName: Flyingsword Proj
+	FlyingGunProj.DisplayName: Flying Gun Proj
+	MagicSachetProj.DisplayName: Magic Sachet Proj
+	FlyingSeedlerProj.DisplayName: Flying Seedler Proj
+	FlyingSeedlerProj_P.DisplayName: Flying Seedler Proj_ P
+	FlyingSeedlerProj_PP.DisplayName: Flying Seedler Proj_ P P
+	FlyingTizonaSwordProj.DisplayName: Flying Tizona Sword Proj
+	FlyingTizonaSwordProj_.DisplayName: Flying Tizona Sword Proj_
+	FlyingTizonaSwordProj_P.DisplayName: Flying Tizona Sword Proj_ P
+	FlyingTheHorsemansBladeProj.DisplayName: Flying The Horsemans Blade Proj
+	FlyingTheHorsemansBladeProj_P.DisplayName: Flying The Horsemans Blade Proj_ P
+	FlyingInfluxWaverProj.DisplayName: Flying Influx Waver Proj
+	FlyingPaintingColdSnapProj.DisplayName: Flying Painting Cold Snap Proj
+	FlyingStarWrathProj.DisplayName: Flying Star Wrath Proj
+	DamoclesBookProj.DisplayName: Damocles Book Proj
+	FlyingMeowmereProj.DisplayName: Flying Meowmere Proj
+	FlyingZenithProj.DisplayName: Flying Zenith Proj
+	FlyingZenithProj_P.DisplayName: Flying Zenith Proj_ P
+	DemonSuppressingSword_Swing.DisplayName: Demon Suppressing Sword_ Swing
+	DemonSuppressingSwordProj.DisplayName: Demon Suppressing Sword Proj
+	DemonSuppressingSwordProj_.DisplayName: Demon Suppressing Sword Proj_
+	DemonSuppressingSwordProj_R.DisplayName: Demon Suppressing Sword Proj_ R
+	DemonSuppressingSwordProj_O.DisplayName: Demon Suppressing Sword Proj_ O
+	StarfuryWhipProj.DisplayName: Starfury Whip Proj
+	FlameCross_Proj.DisplayName: Flame Cross_ Proj
+	TianjingSwordProj.DisplayName: Tianjing Sword Proj
+	TianjingSwordProj_Body_0.DisplayName: Tianjing Sword Proj_ Body_0
+	TianjingSwordProj_Body_1.DisplayName: Tianjing Sword Proj_ Body_1
+	TianjingSwordProj_Body_2.DisplayName: Tianjing Sword Proj_ Body_2
+	TianjingSwordProj_Body_3.DisplayName: Tianjing Sword Proj_ Body_3
+	TianjingSwordProj_Head.DisplayName: Tianjing Sword Proj_ Head
+	TianjingSwordProj_Tail.DisplayName: Tianjing Sword Proj_ Tail
+	TianjingSword_0Proj.DisplayName: Tianjing Sword_0 Proj
+	TianjingSword_0Proj_Body_0.DisplayName: Tianjing Sword_0 Proj_ Body_0
+	TianjingSword_0Proj_Body_1.DisplayName: Tianjing Sword_0 Proj_ Body_1
+	TianjingSword_0Proj_Body_2.DisplayName: Tianjing Sword_0 Proj_ Body_2
+	TianjingSword_0Proj_Body_3.DisplayName: Tianjing Sword_0 Proj_ Body_3
+	TianjingSword_0Proj_Head.DisplayName: Tianjing Sword_0 Proj_ Head
+	TianjingSword_0Proj_Tail.DisplayName: Tianjing Sword_0 Proj_ Tail
+	TianjingSwordProj_Right.DisplayName: Tianjing Sword Proj_ Right
+	TianjingSwordProj_Right_.DisplayName: Tianjing Sword Proj_ Right_
+	TianjingSword_0Proj_Right.DisplayName: Tianjing Sword_0 Proj_ Right
+	TianjingSword_0Proj_Right_.DisplayName: Tianjing Sword_0 Proj_ Right_
+	TianjingSword_1Proj.DisplayName: Tianjing Sword_1 Proj
+	TianjingSword_1Proj_Body_0.DisplayName: Tianjing Sword_1 Proj_ Body_0
+	TianjingSword_1Proj_Body_1.DisplayName: Tianjing Sword_1 Proj_ Body_1
+	TianjingSword_1Proj_Body_2.DisplayName: Tianjing Sword_1 Proj_ Body_2
+	TianjingSword_1Proj_Body_3.DisplayName: Tianjing Sword_1 Proj_ Body_3
+	TianjingSword_1Proj_Head.DisplayName: Tianjing Sword_1 Proj_ Head
+	TianjingSword_1Proj_Right.DisplayName: Tianjing Sword_1 Proj_ Right
+	TianjingSword_1Proj_Right_.DisplayName: Tianjing Sword_1 Proj_ Right_
+	TianjingSword_1Proj_Tail.DisplayName: Tianjing Sword_1 Proj_ Tail
+	TianjingSword_2Proj.DisplayName: Tianjing Sword_2 Proj
+	TianjingSword_2Proj_Body_0.DisplayName: Tianjing Sword_2 Proj_ Body_0
+	TianjingSword_2Proj_Body_1.DisplayName: Tianjing Sword_2 Proj_ Body_1
+	TianjingSword_2Proj_Body_2.DisplayName: Tianjing Sword_2 Proj_ Body_2
+	TianjingSword_2Proj_Body_3.DisplayName: Tianjing Sword_2 Proj_ Body_3
+	TianjingSword_2Proj_Head.DisplayName: Tianjing Sword_2 Proj_ Head
+	TianjingSword_2Proj_Right.DisplayName: Tianjing Sword_2 Proj_ Right
+	TianjingSword_2Proj_Tail.DisplayName: Tianjing Sword_2 Proj_ Tail
+	TianjingSword_3Proj.DisplayName: Tianjing Sword_3 Proj
+	TianjingSword_3Proj_Body_0.DisplayName: Tianjing Sword_3 Proj_ Body_0
+	TianjingSword_3Proj_Body_1.DisplayName: Tianjing Sword_3 Proj_ Body_1
+	TianjingSword_3Proj_Body_2.DisplayName: Tianjing Sword_3 Proj_ Body_2
+	TianjingSword_3Proj_Body_3.DisplayName: Tianjing Sword_3 Proj_ Body_3
+	TianjingSword_3Proj_Head.DisplayName: Tianjing Sword_3 Proj_ Head
+	TianjingSword_3Proj_Right.DisplayName: Tianjing Sword_3 Proj_ Right
+	TianjingSword_3Proj_Tail.DisplayName: Tianjing Sword_3 Proj_ Tail
+	SpringFestivalElf.DisplayName: Spring Festival Elf
+	SpringFestivalElf_Shoot.DisplayName: Spring Festival Elf_ Shoot
+	SpringFestivalElf_.DisplayName: Spring Festival Elf_
+	TianjingZiSwordProj_Body_0.DisplayName: Tianjing Zi Sword Proj_ Body_0
+	TianjingZiSwordProj_Body_1.DisplayName: Tianjing Zi Sword Proj_ Body_1
+	TianjingZiSwordProj_Body_2.DisplayName: Tianjing Zi Sword Proj_ Body_2
+	TianjingZiSwordProj_Body_3.DisplayName: Tianjing Zi Sword Proj_ Body_3
+	TianjingZiSwordProj_Head.DisplayName: Tianjing Zi Sword Proj_ Head
+	TianjingZiSwordProj_Tail.DisplayName: Tianjing Zi Sword Proj_ Tail
+	FlyingGunProjectile_190.DisplayName: Flying Gun Projectile_190
+	FlyingGunProjectile_444.DisplayName: Flying Gun Projectile_444
+	MagicSachetProjectile_535.DisplayName: Magic Sachet Projectile_535
+	MagicSachetProjectile_632.DisplayName: Magic Sachet Projectile_632
+	TianjingSword_4Proj.DisplayName: Tianjing Sword_4 Proj
+	TianjingSword_4Proj_Body_0.DisplayName: Tianjing Sword_4 Proj_ Body_0
+	TianjingSword_4Proj_Body_1.DisplayName: Tianjing Sword_4 Proj_ Body_1
+	TianjingSword_4Proj_Body_2.DisplayName: Tianjing Sword_4 Proj_ Body_2
+	TianjingSword_4Proj_Body_3.DisplayName: Tianjing Sword_4 Proj_ Body_3
+	TianjingSword_4Proj_Head.DisplayName: Tianjing Sword_4 Proj_ Head
+	TianjingSword_4Proj_Right.DisplayName: Tianjing Sword_4 Proj_ Right
+	TianjingSword_4Proj_Tail.DisplayName: Tianjing Sword_4 Proj_ Tail
+	TianjingSword_5Proj.DisplayName: Tianjing Sword_5 Proj
+	TianjingSword_5Proj_Body_0.DisplayName: Tianjing Sword_5 Proj_ Body_0
+	TianjingSword_5Proj_Body_1.DisplayName: Tianjing Sword_5 Proj_ Body_1
+	TianjingSword_5Proj_Body_2.DisplayName: Tianjing Sword_5 Proj_ Body_2
+	TianjingSword_5Proj_Body_3.DisplayName: Tianjing Sword_5 Proj_ Body_3
+	TianjingSword_5Proj_Head.DisplayName: Tianjing Sword_5 Proj_ Head
+	TianjingSword_5Proj_Right.DisplayName: Tianjing Sword_5 Proj_ Right
+	TianjingSword_5Proj_Tail.DisplayName: Tianjing Sword_5 Proj_ Tail
+	TianjingSword_6Proj.DisplayName: Tianjing Sword_6 Proj
+	TianjingSword_6Proj_.DisplayName: Tianjing Sword_6 Proj_
+	VoidFirmamentYoyoProj.DisplayName: Void Firmament Yoyo Proj
+	AllCreationFallsProj.DisplayName: All Creation Falls Proj
+	AllCreationFallsProj_.DisplayName: All Creation Falls Proj_
+	PhoenixEmperorAxe_Swing.DisplayName: Phoenix Emperor Axe_ Swing
+	TigerVigorProj.DisplayName: Tiger Vigor Proj
+	TigerVigorDashProj.DisplayName: Tiger Vigor Dash Proj
+	DivineFireBeastProj.DisplayName: Divine Fire Beast Proj
+	DivineFireBeastProj_.DisplayName: Divine Fire Beast Proj_
+	DivineFireBeastProj_L.DisplayName: Divine Fire Beast Proj_ L
+}
+
+Configs: {
+	SwordMasteryConfig: {
+		DisplayName: Sword Master client configuration
+
+		StrengthExperience: {
+			Label: Module strength experience
+			Tooltip:
+				'''
+				Select the overall experience intensity of the module: 'I am God' is a super model experience, and 'Pursue Ordinary' is an ordinary experience.
+				(Changes require re-entering the map)
+				'''
+		}
+
+		EnableExtraAffix: {
+			Label: Enable additional supermodel entries
+			Tooltip:
+				'''
+				Turn on to enable the module's special supermodel entry
+				Accessories: PrimeCall, DualSoul, TriBond, QuadHost
+				'''
+		}
+
+		EnableSwordMasteryPrefixes: {
+			Label: Enable Sword Master module prefix
+			Tooltip:
+				'''
+				Turn on to enable module special terms
+				Weapons: UltimateFinisher, Awaken, SuckBlood, Mastery, BloodFiend, DivineBlessing, Infinity, Titan, InchFlash
+				Accessories: Command, Indenture
+				'''
+		}
+
+		Headers: {
+			视觉设置: visual settings
+			体验设置: Experience settings
+		}
+
+		FriendlyProjectileAlpha: {
+			Label: Friendly barrage transparency
+			Tooltip: Set the transparency of friendly barrages, 0 is completely transparent, 1 is completely opaque.
+		}
+	}
+
+	StrengthMode: {
+		Tooltip: ""
+
+		God: {
+			Label: I am god
+			Tooltip:
+				'''
+				Module sword weapon panel damage remains unchanged
+				The damage conversion rates of scabbards, weapon arsenals, and magic bags remain unchanged.
+				'''
+		}
+
+		Ordinary: {
+			Label: pursue the ordinary
+			Tooltip:
+				'''
+				Module sword weapon panel damage reduced by 40%
+				The damage conversion rate of scabbards, weapon arsenals, and magic bags is reduced by 40%.
+				'''
+		}
+	}
+}
+
+NPCs: {
+	Swordsmith: {
+		DisplayName: Swordsmith
+
+		TownNPCMood: {
+			Content: Enough, little brother.
+			NoHome: I've been wandering outside for a long time and want to settle down.
+			FarFromHome: I didn't realize it was going a little far.
+			LoveSpace: This is a great place for me to practice swordsmanship.
+			DislikeCrowded: It's too crowded, I'm afraid I'll disturb others when I forge the sword.
+			HateCrowded: It's too crowded, I'm not used to it.
+			LikeBiome: The mountains and rivers here are beautiful, and there are good fields and houses, I fell in love with {BiomeName}.
+			DislikeBiome: But it reminds me of something sad, I don't like {BiomeName}.
+			LoveNPC: I have a good impression of {NPCName}.
+			LikeNPC: Well, {NPCName} is a simple person.
+			DislikeNPC: Hold back...... {NPCName} will be punished sooner or later.
+			HateNPC: I can't help it, get a knife, I'm going to chop {NPCName}!
+			LikeNPC_Princess: I don't dislike {NPCName}.
+			Princess_LovesNPC: Well, {NPCName} is really good
+		}
+
+		Census.SpawnCondition: Conditions unknown
+	}
+}
+
+Prefixes: {
+	PowerTooltip: ""
+
+	Awaken: {
+		AdditionalTooltip: ""
+		DisplayName: Awaken
+	}
+
+	SuckBlood: {
+		AdditionalTooltip:
+			'''
+			+100% Hit Vampirism (8%)
+			Changed the weapon to wield
+			'''
+		DisplayName: SuckBlood
+	}
+
+	SwordMasteryPrefix: {
+		AdditionalTooltip: ""
+		DisplayName: Mastery
+	}
+
+	Awaken_2: {
+		AdditionalTooltip: ""
+		DisplayName: Awaken
+	}
+
+	BloodFiend: {
+		AdditionalTooltip:
+			'''
+			-20% of maximum health
+			+80% Full Lifesteal (4%, Max: 3)
+			+20% total blood reduction (4%, Max: 3)
+			'''
+		DisplayName: BloodFiend
+	}
+
+	UltimateFinisher: {
+		AdditionalTooltip:
+			'''
+			At the cost of fragmenting prefixes
+			You will be reborn once
+			'''
+		DisplayName: "[c/F477DD:UltimateFinisher]"
+	}
+
+	Awaken_3: {
+		AdditionalTooltip: ""
+		DisplayName: Awaken
+	}
+
+	DivineBlessing: {
+		AdditionalTooltip: ""
+		DisplayName: DivineBlessing
+	}
+
+	Infinity: {
+		AdditionalTooltip: ""
+		DisplayName: Infinity
+	}
+
+	Infinity_2: {
+		AdditionalTooltip: ""
+		DisplayName: Infinity
+	}
+
+	Titan: {
+		AdditionalTooltip: ""
+		DisplayName: Titan
+	}
+
+	InchFlash: {
+		AdditionalTooltip: ""
+		DisplayName: InchFlash
+	}
+
+	DualSoul: {
+		AdditionalTooltip: ""
+		DisplayName: Command
+	}
+
+	PrimeCall: {
+		AdditionalTooltip: ""
+		DisplayName: Indenture
+	}
+
+	DualSoul_: {
+		AdditionalTooltip: ""
+		DisplayName: DualSoul
+	}
+
+	PrimeCall_: {
+		AdditionalTooltip: ""
+		DisplayName: PrimeCall
+	}
+
+	QuadHost: {
+		AdditionalTooltip: ""
+		DisplayName: QuadHost
+	}
+
+	TriBond: {
+		AdditionalTooltip: ""
+		DisplayName: TriBond
+	}
+}
+
+Keybinds.圣焰裁决.DisplayName: 圣焰裁决

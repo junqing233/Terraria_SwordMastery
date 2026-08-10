@@ -1,0 +1,12 @@
+C:\Users\29591\Documents\My Games\Terraria\tModLoader\ModSources\SwordMastery\bin\Debug\net8.0\SwordMastery.deps.json
+C:\Users\29591\Documents\My Games\Terraria\tModLoader\ModSources\SwordMastery\bin\Debug\net8.0\SwordMastery.dll
+C:\Users\29591\Documents\My Games\Terraria\tModLoader\ModSources\SwordMastery\bin\Debug\net8.0\SwordMastery.pdb
+C:\Users\29591\Documents\My Games\Terraria\tModLoader\ModSources\SwordMastery\obj\Debug\net8.0\SwordMastery.csproj.AssemblyReference.cache
+C:\Users\29591\Documents\My Games\Terraria\tModLoader\ModSources\SwordMastery\obj\Debug\net8.0\SwordMastery.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\29591\Documents\My Games\Terraria\tModLoader\ModSources\SwordMastery\obj\Debug\net8.0\SwordMastery.AssemblyInfoInputs.cache
+C:\Users\29591\Documents\My Games\Terraria\tModLoader\ModSources\SwordMastery\obj\Debug\net8.0\SwordMastery.AssemblyInfo.cs
+C:\Users\29591\Documents\My Games\Terraria\tModLoader\ModSources\SwordMastery\obj\Debug\net8.0\SwordMastery.csproj.CoreCompileInputs.cache
+C:\Users\29591\Documents\My Games\Terraria\tModLoader\ModSources\SwordMastery\obj\Debug\net8.0\SwordMastery.dll
+C:\Users\29591\Documents\My Games\Terraria\tModLoader\ModSources\SwordMastery\obj\Debug\net8.0\refint\SwordMastery.dll
+C:\Users\29591\Documents\My Games\Terraria\tModLoader\ModSources\SwordMastery\obj\Debug\net8.0\SwordMastery.pdb
+C:\Users\29591\Documents\My Games\Terraria\tModLoader\ModSources\SwordMastery\obj\Debug\net8.0\ref\SwordMastery.dll

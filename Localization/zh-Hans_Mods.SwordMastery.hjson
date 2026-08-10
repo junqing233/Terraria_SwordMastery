@@ -1,0 +1,1169 @@
+Buffs: {
+	BuffsFlyingIronBroadsword: {
+		DisplayName: 铁阔剑·御
+		Description: 铁阔剑将为你而战
+	}
+
+	BuffsFlyingSilverBroadsword: {
+		DisplayName: 银阔剑·御
+		Description: 银阔剑将为你而战
+	}
+
+	BuffsFlyingGoldBroadsword: {
+		DisplayName: 金阔剑·御
+		Description: 金阔剑将为你而战
+	}
+
+	BuffsFlyingLightsBane: {
+		DisplayName: 魔光剑·御
+		Description: 魔光剑将为你而战
+	}
+
+	BuffsFlyingBloodButcherer: {
+		DisplayName: 血腥屠刀·御
+		Description: 血腥屠刀将为你而战
+	}
+
+	BuffsFlyingBladeofGrass: {
+		DisplayName: 草剑·御
+		Description: 草剑将为你而战
+	}
+
+	BuffsFlyingBeeKeeper: {
+		DisplayName: 养蜂人·御
+		Description: 养蜂人将为你而战
+	}
+
+	BuffsFlyingStarfury: {
+		DisplayName: 星怒·御
+		Description: 星怒将为你而战
+	}
+
+	BuffsFlyingEnchantedSword: {
+		DisplayName: 附魔剑·御
+		Description: 附魔剑将为你而战
+	}
+
+	BuffsFlyingIceBlade: {
+		DisplayName: 冰雪刃·御
+		Description: 冰雪刃将为你而战
+	}
+
+	BuffsFlyingFieryGreatsword: {
+		DisplayName: 火山·御
+		Description: 火山将为你而战
+	}
+
+	BuffsFlyingBoneSword: {
+		DisplayName: 骨剑·御
+		Description: 骨剑将为你而战
+	}
+
+	BuffsFlyingBoneSword_: {
+		DisplayName: 刻骨铭心
+		Description: 降低敌人1点防御力，可无限叠加
+	}
+
+	BuffsFlyingTerragrim: {
+		DisplayName: 泰拉魔刃·御
+		Description: 泰拉魔刃将为你而战
+	}
+
+	BuffsFlyingNightsEdge: {
+		DisplayName: 永夜刃·御
+		Description: 永夜刃将为你而战
+	}
+
+	BuffsDemonBlade: {
+		DisplayName: 魔剑
+		Description: 魔剑将为你而战
+	}
+
+	BuffsFlyingLeadBroadsword: {
+		DisplayName: 铅宽剑·御
+		Description: 铅宽剑将为你而战
+	}
+
+	BuffsFlyingPlatinumBroadsword: {
+		DisplayName: 钨宽剑·御
+		Description: 钨宽剑将为你而战
+	}
+
+	BuffsFlyingTungstenBroadsword: {
+		DisplayName: 铂金宽剑·御
+		Description: 铂金宽剑将为你而战
+	}
+
+	BuffsFlyingCobaltSword: {
+		DisplayName: 钴剑·御
+		Description: 钴剑将为你而战
+	}
+
+	BuffsDemonBladAddRecipes: {
+		DisplayName: 龙葵的牺牲
+		Description: “哥哥，千年之后，龙葵终于能够帮到你”
+	}
+
+	BuffsFlyingPalladiumSword: {
+		DisplayName: 钯金剑·御
+		Description: 钯金剑将为你而战
+	}
+
+	BuffsFlyingMuramasa: {
+		DisplayName: 村正·御
+		Description: 村正·御将为你而战
+	}
+
+	BuffsFlyingMythrilSword: {
+		DisplayName: 秘银剑·御
+		Description: 秘银剑·御将为你而战
+	}
+
+	BuffsFlyingOrichalcumSword: {
+		DisplayName: 山铜剑·御
+		Description: 山铜剑·御将为你而战
+	}
+
+	BuffsFlyingTitaniumSword: {
+		DisplayName: 钛金剑·御
+		Description: 钛金剑·御将为你而战
+	}
+
+	BuffsFlyingAdamantiteSword: {
+		DisplayName: 精金剑·御
+		Description: 精金剑·御将为你而战
+	}
+
+	BuffsFlyingExcalibur: {
+		DisplayName: 断钢剑·御
+		Description: 断钢剑·御将为你而战
+	}
+
+	BuffsFlyingTrueExcalibur: {
+		DisplayName: 原版断钢剑·御
+		Description: 原版断钢剑·御将为你而战
+	}
+
+	BuffsFlyingTrueNightsEdge: {
+		DisplayName: 真永夜刃·御
+		Description: 真永夜刃·御将为你而战
+	}
+
+	BuffsFlyingTerraBlade: {
+		DisplayName: 泰拉刃·御
+		Description: 泰拉刃·御将为你而战
+	}
+
+	BuffsFlyingsword: {
+		DisplayName: 剑鞘
+		Description: “剑出，魂灭……”
+	}
+
+	BuffsFlyingGun: {
+		DisplayName: 军火库
+		Description: “这简直太疯狂了！”
+	}
+
+	BuffsMagicSachet: {
+		DisplayName: 魔法袋
+		Description: “魔法使其获得了灵魂……”
+	}
+
+	BuffsMountBadge: {
+		DisplayName: 坐骑徽章
+		Description: “万物皆可化为坐骑！”
+	}
+
+	BuffsFlyingSeedler: {
+		DisplayName: 种子弯刀·御
+		Description: 种子弯刀·御将为你而战
+	}
+
+	BuffsFlyingTizonaSword: {
+		DisplayName: Tizona剑·御
+		Description: Tizona剑·御将为你而战
+	}
+
+	BuffsFlyingTheHorsemansBlade: {
+		DisplayName: 无头骑上剑·御
+		Description: 无头骑上剑·御将为你而战
+	}
+
+	BuffsFlyingInfluxWaver: {
+		DisplayName: 波涌之刃·御
+		Description: 波涌之刃·御将为你而战
+	}
+
+	BuffsFlyingStarWrath: {
+		DisplayName: 狂星之怒·御
+		Description: 狂星之怒·御将为你而战
+	}
+
+	BuffsFlyingMeowmere: {
+		DisplayName: 彩虹猫之刃·御
+		Description: 彩虹猫之刃·御将为你而战
+	}
+
+	BuffsFlyingZenith: {
+		DisplayName: 天顶剑·御
+		Description: 天顶剑·御将为你而战
+	}
+
+	BuffsDemonSuppressingSword: {
+		DisplayName: 镇妖剑
+		Description: 镇妖剑将为你而战
+	}
+
+	WhipAdvancedDebuff: {
+		// DisplayName: Whip Advanced Debuff
+		// Description: Mods.SwordMastery.Buffs.WhipAdvancedDebuff.Description
+	}
+
+	WhipDebuff: {
+		// DisplayName: Whip Debuff
+		// Description: Mods.SwordMastery.Buffs.WhipDebuff.Description
+	}
+
+	BuffsSpringFestivalElf: {
+		DisplayName: 新春精灵
+		Description: 新春精灵将为你而战
+	}
+
+	BuffsDivineMelody: {
+		DisplayName: 神舞祝福
+		Description: 大幅度增加玩家防御力、生命恢复、移速、伤害、穿甲
+	}
+
+	BuffsRavageCrab: {
+		// DisplayName: Buffs Ravage Crab
+		// Description: Mods.SwordMastery.Buffs.BuffsRavageCrab.Description
+	}
+}
+
+Items: {
+	FlyingIronBroadsword: {
+		DisplayName: 铁阔剑·御
+		Tooltip: ""
+	}
+
+	FlyingSilverBroadsword: {
+		DisplayName: 银阔剑·御
+		Tooltip: ""
+	}
+
+	FlyingGoldBroadsword: {
+		DisplayName: 金阔剑·御
+		Tooltip: ""
+	}
+
+	FlyingLightsBane: {
+		DisplayName: 魔光剑·御
+		Tooltip:
+			'''
+			“魔光剑·御”攻击敌人
+			触发黑暗斩切攻击
+			'''
+	}
+
+	FlyingBloodButcherer: {
+		DisplayName: 血腥屠刀·御
+		Tooltip:
+			'''
+			“血腥屠刀·御”攻击敌人
+			触发“血腥屠宰”效果
+			'''
+	}
+
+	FlyingBladeofGrass: {
+		DisplayName: 草剑·御
+		Tooltip:
+			'''
+			“草剑·御”攻击敌人
+			触发叶刃攻击
+			'''
+	}
+
+	FlyingBeeKeeper: {
+		DisplayName: 养蜂人·御
+		Tooltip:
+			'''
+			“养蜂人·御”攻击敌人
+			触发杀人蜂攻击
+			25%困惑效果
+			'''
+	}
+
+	FlyingStarfury: {
+		DisplayName: 星怒·御
+		Tooltip:
+			'''
+			“星怒·御”攻击敌人
+			33%触发星星攻击
+			'''
+	}
+
+	FlyingEnchantedSword: {
+		DisplayName: 附魔剑·御
+		Tooltip:
+			'''
+			“附魔剑·御”攻击敌人
+			触发剑气攻击
+			'''
+	}
+
+	FlyingIceBlade: {
+		DisplayName: 冰雪刃·御
+		Tooltip:
+			'''
+			“冰雪刃·御”飞旋时
+			触发冰矢攻击
+			'''
+	}
+
+	FlyingFieryGreatsword: {
+		DisplayName: 火山·御
+		Tooltip:
+			'''
+			“火山·御”攻击敌人
+			触发爆炸攻击
+			'''
+	}
+
+	FlyingBoneSword: {
+		DisplayName: 骨剑·御
+		Tooltip:
+			'''
+			“骨剑·御”攻击敌人
+			减少敌人1防御
+			持续2秒
+			可叠加
+			'''
+	}
+
+	FlyingTerragrim: {
+		DisplayName: 泰拉魔刃·御
+		Tooltip:
+			'''
+			“泰拉魔刃·御”攻击敌人
+			触发切割攻击
+			'''
+	}
+
+	FlyingNightsEdge: {
+		DisplayName: 永夜刃·御
+		Tooltip:
+			'''
+			“永夜刃·御”攻击敌人
+			触发夜光斩攻击
+			'''
+	}
+
+	DemonBlade: {
+		DisplayName: 魔剑
+		Tooltip:
+			'''
+			“魔剑”攻击敌人
+			80%触发魔气攻击
+			魔气附带吸血效果
+			'''
+	}
+
+	BladeForge: {
+		DisplayName: 铸剑台
+		// Tooltip: ""
+	}
+
+	FlyingLeadBroadsword: {
+		DisplayName: 铅宽剑·御
+		// Tooltip: ""
+	}
+
+	FlyingPlatinumBroadsword: {
+		DisplayName: 铂金宽剑·御
+		// Tooltip: ""
+	}
+
+	FlyingTungstenBroadsword: {
+		DisplayName: 钨宽剑·御
+		// Tooltip: ""
+	}
+
+	FlyingCobaltSword: {
+		DisplayName: 钴剑·御
+		Tooltip:
+			'''
+			“钴剑·御”攻击敌人
+			触发钴独斩攻击
+			+10%鞭攻速
+			持续2秒
+			'''
+	}
+
+	LongkuiVoodooDoll: {
+		DisplayName: 龙葵巫毒娃娃
+		// Tooltip: ""
+	}
+
+	RemoveLightStone: {
+		DisplayName: 魔石
+		Tooltip: 分解一把特殊御刃得到的精华
+	}
+
+	FlyingPalladiumSword: {
+		DisplayName: 钯金剑·御
+		Tooltip:
+			'''
+			“钯金剑·御”攻击敌人
+			触发钯金石攻击
+			50%触发快速治疗效果
+			持续2秒
+			'''
+	}
+
+	FlyingMuramasa: {
+		DisplayName: 村正·御
+		Tooltip:
+			'''
+			“村正·御”攻击敌人
+			触发岚斩攻击
+			'''
+	}
+
+	FlyingMythrilSword: {
+		DisplayName: 秘银剑·御
+		Tooltip:
+			'''
+			“秘银剑·御”飞旋时
+			触发剑影攻击
+			+20点鞭穿透
+			持续2秒
+			'''
+	}
+
+	FlyingOrichalcumSword: {
+		DisplayName: 山铜剑·御
+		Tooltip:
+			'''
+			“山铜剑·御”攻击敌人
+			触发花瓣舞攻击
+			+20点鞭穿透
+			持续2秒
+			'''
+	}
+
+	FlyingTitaniumSword: {
+		DisplayName: 钛金剑·御
+		Tooltip:
+			'''
+			“钛金剑·御”攻击敌人
+			触钛金屏障效果
+			(穿上钛金套失效)
+			(1剑/5钛金碎片)
+			+10%伤害减免
+			+10%鞭伤害
+			持续2秒
+			'''
+	}
+
+	FlyingAdamantiteSword: {
+		DisplayName: 精金剑·御
+		Tooltip:
+			'''
+			“精金剑·御”攻击敌人
+			触发精金御卫效果
+			挥舞鞭类武器，御卫将开火
+			(首剑3御卫,余后1剑/1御卫)
+			+10%鞭攻速
+			+10%移速
+			持续2秒
+			'''
+	}
+
+	FlyingExcalibur: {
+		DisplayName: 断钢剑·御
+		Tooltip:
+			'''
+			“断钢剑·御”攻击敌人
+			触发断钢斩攻击
+			+10%鞭范围
+			+10%召唤伤害
+			持续2秒
+			'''
+	}
+
+	FlyingTrueExcalibur: {
+		DisplayName: 原版断钢剑·御
+		Tooltip:
+			'''
+			“原版断钢剑·御”攻击敌人
+			触发真断钢斩攻击
+			+15%鞭范围
+			+15%召唤伤害
+			持续2秒
+			'''
+	}
+
+	FlyingTrueNightsEdge: {
+		DisplayName: 真永夜刃·御
+		Tooltip:
+			'''
+			“真永夜刃·御”飞旋与攻击时
+			触发极光旋斩与夜光微斩攻击
+			+15%鞭攻速
+			+15%鞭伤害
+			持续2秒
+			'''
+	}
+
+	FlyingTerraBlade: {
+		DisplayName: 泰拉刃·御
+		Tooltip:
+			'''
+			“泰拉刃·御”飞旋与攻击时
+			触发泰拉光斩与泰拉刃斩攻击
+			+20%召唤伤害
+			+20%鞭伤害
+			+20%鞭攻速
+			+20%鞭范围
+			持续2秒
+			'''
+	}
+
+	Flyingsword: {
+		DisplayName: 剑鞘
+		Tooltip: 右键点击打开剑鞘
+	}
+
+	FlyingGun: {
+		DisplayName: 军火库
+		Tooltip: 右键点击打开军火库
+	}
+
+	Quiver: {
+		DisplayName: 箭袋
+		Tooltip:
+			'''
+			使用弓类武器时
+			额外发射一支木箭
+			'''
+	}
+
+	FlameCross: {
+		DisplayName: 圣焰十字架
+		Tooltip:
+			'''
+			“墓碑并非一无是处……”
+			左键扔出背包中的墓碑
+			墓碑可伤害任何人
+			右键快速回收墓碑
+			'''
+	}
+
+	MasterSword: {
+		DisplayName: 大师之剑
+		// Tooltip: ""
+	}
+
+	MagicSachet: {
+		DisplayName: 魔法袋
+		Tooltip: 右键点击打开魔法袋
+	}
+
+	MountBadge: {
+		DisplayName: 坐骑徽章
+		Tooltip: ""
+	}
+
+	FlyingSeedler: {
+		DisplayName: 种子弯刀·御
+		Tooltip:
+			'''
+			“种子弯刀·御”飞旋时
+			触发种子攻击
+			+10%召唤伤害
+			+25%移速
+			持续2秒
+			'''
+	}
+
+	FlyingTizonaSword: {
+		DisplayName: Tizona剑·御
+		Tooltip:
+			'''
+			“Tizona剑·御”飞旋与攻击时
+			触发Tizona光斩与Tizona旋斩攻击
+			+15%伤害减免
+			+15%防御力
+			持续2秒
+			'''
+	}
+
+	FlyingTheHorsemansBlade: {
+		DisplayName: 无头骑上剑·御
+		Tooltip:
+			'''
+			“无头骑上剑·御”攻击时
+			触发无头骑上光斩与南瓜头攻击
+			+15%召唤伤害
+			+20点盔甲穿透
+			持续2秒
+			'''
+	}
+
+	FlyingInfluxWaver: {
+		DisplayName: 波涌之刃·御
+		Tooltip:
+			'''
+			“波涌之刃·御”攻击时
+			触发波涌剑气攻击
+			+15%召唤伤害
+			+20点盔甲穿透
+			持续2秒
+			'''
+	}
+
+	FlyingStarWrath: {
+		DisplayName: 狂星之怒·御
+		Tooltip:
+			'''
+			“狂星之怒·御”攻击时
+			触发狂星攻击
+			+15%召唤伤害
+			+25%移速
+			持续2秒
+			'''
+	}
+
+	FlyingMeowmere: {
+		DisplayName: 彩虹猫之刃·御
+		Tooltip:
+			'''
+			“彩虹猫之刃·御”攻击时
+			触发彩虹猫攻击
+			+20%召唤伤害
+			持续2秒
+			'''
+	}
+
+	FlyingZenith: {
+		DisplayName: 天顶剑·御
+		Tooltip:
+			'''
+			“天顶剑·御”攻击时
+			触发所有御剑的力量
+			'''
+	}
+
+	DemonSuppressingSword: {
+		DisplayName: 镇妖剑
+		Tooltip:
+			'''
+			“镇妖剑”攻击时
+			50%概率触发小剑灵辅助战斗
+			击杀目标恢复玩家20%血量，召唤剑越多恢复越多
+			极低概率触发“镇杀”效果，敌人百分比血量越低概率越大
+			'''
+	}
+
+	SpringSpirit: {
+		DisplayName: 照胆神泉的泉魂
+		Tooltip:
+			'''
+			有着世间最纯净的灵波，能照尽一个人的须眉肺腑
+			小人照之胆寒，君子照之坦荡，号为“照胆”
+			(血月时神圣地垂钓)
+			'''
+	}
+
+	StarfuryWhip: {
+		DisplayName: 星怒鞭
+		Tooltip: “来自天堂的愤怒”
+	}
+
+	FlameCross_Acc: {
+		DisplayName: 圣焰十字架
+		// Tooltip: ""
+	}
+
+	TianjingSword: {
+		DisplayName: 原初天晶剑
+		Tooltip: 你可以在一颗蛋里找到它
+	}
+
+	TianjingSword_0: {
+		DisplayName: 冰霜天晶剑
+		Tooltip: 天晶剑在雪原晶塔附近吸收能量
+	}
+
+	TianjingSword_1: {
+		DisplayName: 火焰天晶剑
+		Tooltip: 天晶剑在沙漠晶塔附近吸收能量
+	}
+
+	TianjingSword_2: {
+		DisplayName: 紫电天晶剑
+		Tooltip: 天晶剑在洞穴晶塔附近吸收能量
+	}
+
+	TianjingSword_3: {
+		DisplayName: 旋风天晶剑
+		Tooltip: 天晶剑在丛林晶塔附近吸收能量
+	}
+
+	TianjingZiSword: {
+		DisplayName: 天晶子剑
+		Tooltip:
+			'''
+			你的攻击击中敌人后
+			有概率召唤一条粉龙
+			'''
+	}
+
+	Matchbox: {
+		DisplayName: 神秘火柴
+		// Tooltip: ""
+	}
+
+	TianjingSword_4: {
+		DisplayName: 影子天晶剑
+		Tooltip: 天晶剑通过虚无魔镜复制而来
+	}
+
+	TianjingSword_5: {
+		DisplayName: 光明天晶剑
+		Tooltip: 天晶剑在神圣晶塔附近吸收能量
+	}
+
+	VoidMirrorItem: {
+		DisplayName: 虚无魔镜
+		Tooltip: 万物即虚无~
+	}
+
+	TianjingSword_6: {
+		DisplayName: 七彩天晶剑
+		Tooltip: ""
+	}
+
+	VoidFirmamentYoyo: {
+		DisplayName: 太虚
+		Tooltip:
+			'''
+			攻击会轻微聚集周围的敌人
+			(海边垂钓)
+			'''
+	}
+
+	ShennongRuler: {
+		DisplayName: 神农尺
+		Tooltip:
+			'''
+			恢复玩家最大血量的40%~80%
+			冷却时间20~40秒
+			'''
+	}
+
+	DivineMelody: {
+		DisplayName: 神舞
+		Tooltip:
+			'''
+			清除玩家所有负面buff
+			给予玩家大幅度增益buff
+			'''
+	}
+
+	AllCreationFalls: {
+		DisplayName: 十方俱灭
+		Tooltip:
+			'''
+			缓慢的发射十道激光摧毁敌人
+			右键可放置，放置后点击神兵发射激光
+			'''
+	}
+
+	PhoenixEmperorAxe: {
+		DisplayName: 凤皇
+		Tooltip: 攻击可击退敌人并造成霜冻效果
+	}
+
+	RavageCrab: {
+		DisplayName: 惊邪
+		Tooltip: 获得破甲效果
+	}
+
+	HeavenlyPunishment: {
+		DisplayName: 天诛
+		Tooltip: 一次射出9支箭
+	}
+
+	TigerVigor: {
+		DisplayName: 虎魄
+		// Tooltip: ""
+	}
+
+	DivineFireBeast: {
+		DisplayName: 炎兽
+		Tooltip:
+			'''
+			左键攻击有概率点燃敌人
+			右键扔出武器，可停在物块(有概率停在平台上)或敌人身上
+			此时左键可以收回武器，右键可以传送到武器周围并收回武器
+			收回武器后强化一次左键攻击
+			'''
+	}
+}
+
+Projectiles: {
+	FlyingIronBroadswordProj.DisplayName: 铁阔剑·御
+	FlyingSilverBroadswordProj.DisplayName: 银阔剑·御
+	FlyingGoldBroadswordProj.DisplayName: 金阔剑·御
+	FlyingLightsBaneProj.DisplayName: 魔光剑·御
+	FlyingBloodButchererProj.DisplayName: 血腥屠刀·御
+	FlyingBladeofGrassProj.DisplayName: 草剑·御
+	FlyingBeeKeeperProj.DisplayName: 养蜂人·御
+	FlyingStarfuryProj.DisplayName: 星怒·御
+	FlyingEnchantedSwordProj.DisplayName: 附魔剑·御
+	FlyingEnchantedSwordProj_.DisplayName: 魔法挥砍
+	FlyingIceBladeProj.DisplayName: 冰雪刃·御
+	FlyingFieryGreatswordProj.DisplayName: 火山·御
+	FlyingBoneSwordProj.DisplayName: 骨剑·御
+	FlyingTerragrimProj.DisplayName: 泰拉魔刃·御
+	FlyingTerragrimProj_.DisplayName: 切割疾风
+	FlyingNightsEdgeProj.DisplayName: 永夜刃·御
+	FlyingNightsEdgeProj_.DisplayName: 极永之夜
+	DemonBladeProj.DisplayName: 魔剑
+	DemonBlade_Swing.DisplayName: 魔剑挥舞
+	DemonBladeProj_.DisplayName: 魔气纵横
+	DemonBladeProj_R.DisplayName: 魔吞
+	FlyingLeadBroadswordProj.DisplayName: 铅宽剑·御
+	FlyingPlatinumBroadswordProj.DisplayName: 钨宽剑·御
+	FlyingTungstenBroadswordProj.DisplayName: 铂金宽剑·御
+	FlyingCobaltSwordProj.DisplayName: 钴剑·御
+	FlyingCobaltSwordProj_P.DisplayName: 钴独斩
+	FlyingPalladiumSwordProj.DisplayName: 钯金剑·御
+	FlyingPalladiumSwordProj_P.DisplayName: 钯金石
+	FlyingMuramasaProj.DisplayName: 村正·御
+	FlyingMythrilSwordProj.DisplayName: 秘银剑·御
+	FlyingMythrilSwordProj_P.DisplayName: 秘银剑影
+	FlyingOrichalcumSwordProj.DisplayName: 山铜剑·御
+	FlyingOrichalcumSwordProj_P.DisplayName: 花瓣舞
+	FlyingTitaniumSwordProj.DisplayName: 钛金剑·御
+	FlyingAdamantiteSwordProj.DisplayName: 精金剑·御
+	FlyingAdamantiteSwordProj_P.DisplayName: 精金御卫
+	FlyingExcaliburProj.DisplayName: 断钢剑·御
+	FlyingExcaliburProj_P.DisplayName: 不断之钢
+	FlyingTrueExcaliburProj.DisplayName: 原版断钢剑·御
+	FlyingTrueExcaliburProj_P.DisplayName: 不断真钢
+	FlyingTrueNightsEdgeProj.DisplayName: 真永夜刃·御
+	FlyingTrueNightsEdgeProj_P.DisplayName: 极光永昼
+	FlyingTerraBladeProj.DisplayName: 泰拉刃·御
+	FlyingTerraBladeProj_P.DisplayName: 泰拉光斩
+	FlyingTerraBladeProj_P_.DisplayName: 泰拉刃斩
+	FlyingswordProj.DisplayName: 剑
+	FlyingGunProj.DisplayName: 军火
+	MagicSachetProj.DisplayName: 魔法
+	FlyingSeedlerProj.DisplayName: 种子弯刀·御
+	FlyingSeedlerProj_P.DisplayName: 种子弯刀坚果
+	FlyingSeedlerProj_PP.DisplayName: 种子弯刀荆棘
+	FlyingTizonaSwordProj.DisplayName: Tizona剑·御
+	FlyingTizonaSwordProj_.DisplayName: Tizona光斩
+	FlyingTizonaSwordProj_P.DisplayName: Tizona旋斩
+	FlyingTheHorsemansBladeProj.DisplayName: 无头骑上剑·御
+	FlyingTheHorsemansBladeProj_P.DisplayName: 无头骑上光斩
+	// FlyingInfluxWaverProj.DisplayName: Flying Influx Waver Proj
+	// FlyingPaintingColdSnapProj.DisplayName: Flying Painting Cold Snap Proj
+	// FlyingStarWrathProj.DisplayName: Flying Star Wrath Proj
+	// DamoclesBookProj.DisplayName: Damocles Book Proj
+	// FlyingMeowmereProj.DisplayName: Flying Meowmere Proj
+	// FlyingZenithProj.DisplayName: Flying Zenith Proj
+	// FlyingZenithProj_P.DisplayName: Flying Zenith Proj_ P
+	// DemonSuppressingSword_Swing.DisplayName: Demon Suppressing Sword_ Swing
+	// DemonSuppressingSwordProj.DisplayName: Demon Suppressing Sword Proj
+	// DemonSuppressingSwordProj_.DisplayName: Demon Suppressing Sword Proj_
+	// DemonSuppressingSwordProj_R.DisplayName: Demon Suppressing Sword Proj_ R
+	// DemonSuppressingSwordProj_O.DisplayName: Demon Suppressing Sword Proj_ O
+	// StarfuryWhipProj.DisplayName: Starfury Whip Proj
+	// FlameCross_Proj.DisplayName: Flame Cross_ Proj
+	// TianjingSwordProj.DisplayName: Tianjing Sword Proj
+	// TianjingSwordProj_Body_0.DisplayName: Tianjing Sword Proj_ Body_0
+	// TianjingSwordProj_Body_1.DisplayName: Tianjing Sword Proj_ Body_1
+	// TianjingSwordProj_Body_2.DisplayName: Tianjing Sword Proj_ Body_2
+	// TianjingSwordProj_Body_3.DisplayName: Tianjing Sword Proj_ Body_3
+	// TianjingSwordProj_Head.DisplayName: Tianjing Sword Proj_ Head
+	// TianjingSwordProj_Tail.DisplayName: Tianjing Sword Proj_ Tail
+	// TianjingSword_0Proj.DisplayName: Tianjing Sword_0 Proj
+	// TianjingSword_0Proj_Body_0.DisplayName: Tianjing Sword_0 Proj_ Body_0
+	// TianjingSword_0Proj_Body_1.DisplayName: Tianjing Sword_0 Proj_ Body_1
+	// TianjingSword_0Proj_Body_2.DisplayName: Tianjing Sword_0 Proj_ Body_2
+	// TianjingSword_0Proj_Body_3.DisplayName: Tianjing Sword_0 Proj_ Body_3
+	// TianjingSword_0Proj_Head.DisplayName: Tianjing Sword_0 Proj_ Head
+	// TianjingSword_0Proj_Tail.DisplayName: Tianjing Sword_0 Proj_ Tail
+	// TianjingSwordProj_Right.DisplayName: Tianjing Sword Proj_ Right
+	// TianjingSwordProj_Right_.DisplayName: Tianjing Sword Proj_ Right_
+	// TianjingSword_0Proj_Right.DisplayName: Tianjing Sword_0 Proj_ Right
+	// TianjingSword_0Proj_Right_.DisplayName: Tianjing Sword_0 Proj_ Right_
+	// TianjingSword_1Proj.DisplayName: Tianjing Sword_1 Proj
+	// TianjingSword_1Proj_Body_0.DisplayName: Tianjing Sword_1 Proj_ Body_0
+	// TianjingSword_1Proj_Body_1.DisplayName: Tianjing Sword_1 Proj_ Body_1
+	// TianjingSword_1Proj_Body_2.DisplayName: Tianjing Sword_1 Proj_ Body_2
+	// TianjingSword_1Proj_Body_3.DisplayName: Tianjing Sword_1 Proj_ Body_3
+	// TianjingSword_1Proj_Head.DisplayName: Tianjing Sword_1 Proj_ Head
+	// TianjingSword_1Proj_Right.DisplayName: Tianjing Sword_1 Proj_ Right
+	// TianjingSword_1Proj_Right_.DisplayName: Tianjing Sword_1 Proj_ Right_
+	// TianjingSword_1Proj_Tail.DisplayName: Tianjing Sword_1 Proj_ Tail
+	// TianjingSword_2Proj.DisplayName: Tianjing Sword_2 Proj
+	// TianjingSword_2Proj_Body_0.DisplayName: Tianjing Sword_2 Proj_ Body_0
+	// TianjingSword_2Proj_Body_1.DisplayName: Tianjing Sword_2 Proj_ Body_1
+	// TianjingSword_2Proj_Body_2.DisplayName: Tianjing Sword_2 Proj_ Body_2
+	// TianjingSword_2Proj_Body_3.DisplayName: Tianjing Sword_2 Proj_ Body_3
+	// TianjingSword_2Proj_Head.DisplayName: Tianjing Sword_2 Proj_ Head
+	// TianjingSword_2Proj_Right.DisplayName: Tianjing Sword_2 Proj_ Right
+	// TianjingSword_2Proj_Tail.DisplayName: Tianjing Sword_2 Proj_ Tail
+	// TianjingSword_3Proj.DisplayName: Tianjing Sword_3 Proj
+	// TianjingSword_3Proj_Body_0.DisplayName: Tianjing Sword_3 Proj_ Body_0
+	// TianjingSword_3Proj_Body_1.DisplayName: Tianjing Sword_3 Proj_ Body_1
+	// TianjingSword_3Proj_Body_2.DisplayName: Tianjing Sword_3 Proj_ Body_2
+	// TianjingSword_3Proj_Body_3.DisplayName: Tianjing Sword_3 Proj_ Body_3
+	// TianjingSword_3Proj_Head.DisplayName: Tianjing Sword_3 Proj_ Head
+	// TianjingSword_3Proj_Right.DisplayName: Tianjing Sword_3 Proj_ Right
+	// TianjingSword_3Proj_Tail.DisplayName: Tianjing Sword_3 Proj_ Tail
+	// SpringFestivalElf.DisplayName: Spring Festival Elf
+	// SpringFestivalElf_Shoot.DisplayName: Spring Festival Elf_ Shoot
+	// SpringFestivalElf_.DisplayName: Spring Festival Elf_
+	// TianjingZiSwordProj_Body_0.DisplayName: Tianjing Zi Sword Proj_ Body_0
+	// TianjingZiSwordProj_Body_1.DisplayName: Tianjing Zi Sword Proj_ Body_1
+	// TianjingZiSwordProj_Body_2.DisplayName: Tianjing Zi Sword Proj_ Body_2
+	// TianjingZiSwordProj_Body_3.DisplayName: Tianjing Zi Sword Proj_ Body_3
+	// TianjingZiSwordProj_Head.DisplayName: Tianjing Zi Sword Proj_ Head
+	// TianjingZiSwordProj_Tail.DisplayName: Tianjing Zi Sword Proj_ Tail
+	// FlyingGunProjectile_190.DisplayName: Flying Gun Projectile_190
+	// FlyingGunProjectile_444.DisplayName: Flying Gun Projectile_444
+	// MagicSachetProjectile_535.DisplayName: Magic Sachet Projectile_535
+	// MagicSachetProjectile_632.DisplayName: Magic Sachet Projectile_632
+	// TianjingSword_4Proj.DisplayName: Tianjing Sword_4 Proj
+	// TianjingSword_4Proj_Body_0.DisplayName: Tianjing Sword_4 Proj_ Body_0
+	// TianjingSword_4Proj_Body_1.DisplayName: Tianjing Sword_4 Proj_ Body_1
+	// TianjingSword_4Proj_Body_2.DisplayName: Tianjing Sword_4 Proj_ Body_2
+	// TianjingSword_4Proj_Body_3.DisplayName: Tianjing Sword_4 Proj_ Body_3
+	// TianjingSword_4Proj_Head.DisplayName: Tianjing Sword_4 Proj_ Head
+	// TianjingSword_4Proj_Right.DisplayName: Tianjing Sword_4 Proj_ Right
+	// TianjingSword_4Proj_Tail.DisplayName: Tianjing Sword_4 Proj_ Tail
+	// TianjingSword_5Proj.DisplayName: Tianjing Sword_5 Proj
+	// TianjingSword_5Proj_Body_0.DisplayName: Tianjing Sword_5 Proj_ Body_0
+	// TianjingSword_5Proj_Body_1.DisplayName: Tianjing Sword_5 Proj_ Body_1
+	// TianjingSword_5Proj_Body_2.DisplayName: Tianjing Sword_5 Proj_ Body_2
+	// TianjingSword_5Proj_Body_3.DisplayName: Tianjing Sword_5 Proj_ Body_3
+	// TianjingSword_5Proj_Head.DisplayName: Tianjing Sword_5 Proj_ Head
+	// TianjingSword_5Proj_Right.DisplayName: Tianjing Sword_5 Proj_ Right
+	// TianjingSword_5Proj_Tail.DisplayName: Tianjing Sword_5 Proj_ Tail
+	// TianjingSword_6Proj.DisplayName: Tianjing Sword_6 Proj
+	// TianjingSword_6Proj_.DisplayName: Tianjing Sword_6 Proj_
+	// VoidFirmamentYoyoProj.DisplayName: Void Firmament Yoyo Proj
+	// AllCreationFallsProj.DisplayName: All Creation Falls Proj
+	// AllCreationFallsProj_.DisplayName: All Creation Falls Proj_
+	// PhoenixEmperorAxe_Swing.DisplayName: Phoenix Emperor Axe_ Swing
+	// TigerVigorProj.DisplayName: Tiger Vigor Proj
+	// TigerVigorDashProj.DisplayName: Tiger Vigor Dash Proj
+	// DivineFireBeastProj.DisplayName: Divine Fire Beast Proj
+	// DivineFireBeastProj_.DisplayName: Divine Fire Beast Proj_
+	// DivineFireBeastProj_L.DisplayName: Divine Fire Beast Proj_ L
+}
+
+Configs: {
+	SwordMasteryConfig: {
+		DisplayName: 剑之大师客户端配置
+
+		StrengthExperience: {
+			Label: 模组强度体验
+			Tooltip:
+				'''
+				选择模组整体体验强度：'我即神明'为超模体验，'追求平凡'为普通体验
+				（更改生效需重进地图）
+				'''
+		}
+
+		EnableExtraAffix: {
+			Label: 启用额外超模词条
+			Tooltip:
+				'''
+				开启以启用模组特殊超模词条
+				饰品：初灵、双魂、叁契、肆御
+				'''
+		}
+
+		EnableSwordMasteryPrefixes: {
+			Label: 启用剑之大师模组前缀
+			Tooltip:
+				'''
+				开启以启用模组特殊词条
+				武器：王牌、觉醒、嗜血、大师、血煞、神佑、无限、泰坦、寸闪
+				饰品：号令、契约
+				'''
+		}
+
+		Headers: {
+			视觉设置: 视觉设置
+			体验设置: 体验设置
+		}
+
+		FriendlyProjectileAlpha: {
+			Label: 友方弹幕透明度
+			Tooltip: 设置友方弹幕的透明度，0为完全透明，1为完全不透明。
+		}
+	}
+
+	StrengthMode: {
+		// Tooltip: ""
+
+		God: {
+			Label: 我即神明
+			Tooltip:
+				'''
+				模组御剑武器面板伤害不变
+				剑鞘、武器库、魔法袋伤害转换率不变
+				'''
+		}
+
+		Ordinary: {
+			Label: 追求平凡
+			Tooltip:
+				'''
+				模组御剑武器面板伤害降低40%
+				剑鞘、武器库、魔法袋伤害转换率降低40%
+				'''
+		}
+	}
+}
+
+NPCs: {
+	Swordsmith: {
+		DisplayName: 铸剑师
+
+		TownNPCMood: {
+			Content: 足够了，小兄弟。
+			NoHome: 在外漂泊的久了，想安定下来。
+			FarFromHome: 不知不觉走得有点远了。
+			LoveSpace: 此地很适合我用来练剑。
+			DislikeCrowded: 周围太拥挤了，我怕铸剑时吵到别人。
+			HateCrowded: 这里太拥挤了，我不是很习惯。
+			LikeBiome: 这里山青水秀，且有良田屋舍，我爱上了{BiomeName}。
+			DislikeBiome: 不过这里让我想起了一些伤心事，我并不喜欢{BiomeName}。
+			LoveNPC: 我对{NPCName}颇有好感。
+			LikeNPC: 嗯{NPCName}是一个单纯的人。
+			DislikeNPC: 忍住……{NPCName}迟早会遭天谴的。
+			HateNPC: 忍不住了，拿刀来，我要砍{NPCName}！
+			LikeNPC_Princess: 我并不反感 {NPCName}。
+			Princess_LovesNPC: 嗯{NPCName}的确很优秀
+		}
+
+		// Census.SpawnCondition: Conditions unknown
+	}
+}
+
+Prefixes: {
+	PowerTooltip: ""
+
+	Awaken: {
+		AdditionalTooltip: ""
+		DisplayName: 觉醒
+	}
+
+	SuckBlood: {
+		AdditionalTooltip:
+			'''
+			+100%Hit吸血(8%)
+			更换武器使用方式为挥舞
+			'''
+		DisplayName: 嗜血
+	}
+
+	SwordMasteryPrefix: {
+		AdditionalTooltip: ""
+		DisplayName: 大师
+	}
+
+	Awaken_2: {
+		AdditionalTooltip: ""
+		DisplayName: 觉醒
+	}
+
+	BloodFiend: {
+		AdditionalTooltip:
+			'''
+			-20%最大生命值
+			+80%全吸血(4%,Max:3)
+			+20%全减血(4%,Max:3)
+			'''
+		DisplayName: 血煞
+	}
+
+	UltimateFinisher: {
+		AdditionalTooltip:
+			'''
+			以碎裂前缀为代价
+			你将获得一次重生
+			'''
+		DisplayName: "[c/F477DD:王牌]"
+	}
+
+	Awaken_3: {
+		AdditionalTooltip: ""
+		DisplayName: 觉醒
+	}
+
+	DivineBlessing: {
+		AdditionalTooltip: ""
+		DisplayName: 神佑
+	}
+
+	Infinity: {
+		AdditionalTooltip: ""
+		DisplayName: 无限
+	}
+
+	Infinity_2: {
+		AdditionalTooltip: ""
+		DisplayName: 无限
+	}
+
+	Titan: {
+		AdditionalTooltip: ""
+		DisplayName: 泰坦
+	}
+
+	InchFlash: {
+		AdditionalTooltip: ""
+		DisplayName: 寸闪
+	}
+
+	DualSoul: {
+		AdditionalTooltip: ""
+		DisplayName: 号令
+	}
+
+	PrimeCall: {
+		AdditionalTooltip: ""
+		DisplayName: 契约
+	}
+
+	DualSoul_: {
+		AdditionalTooltip: ""
+		DisplayName: 双魂
+	}
+
+	PrimeCall_: {
+		AdditionalTooltip: ""
+		DisplayName: 初灵
+	}
+
+	QuadHost: {
+		AdditionalTooltip: ""
+		DisplayName: 肆御
+	}
+
+	TriBond: {
+		AdditionalTooltip: ""
+		DisplayName: 叁契
+	}
+}
+
+// Keybinds.圣焰裁决.DisplayName: 圣焰裁决

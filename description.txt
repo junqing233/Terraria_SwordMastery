@@ -1,0 +1,98 @@
+﻿【中文介绍】
+「当你能操纵大部分武器为你而战，这将会这是什么感觉？」
+
+剑之大师模组来袭！  
+剑之大师模组将原版已有的一些剑类近战武器额外制作成了召唤师的御剑武器。  
+御剑的攻击模式基于原版泰拉棱镜，而且效果更加多样！  
+目前最高可合成到天顶剑，后续会继续更新更多样的御剑。
+
+【目前内容】  
++ 70 物品  
++ 1 城镇 NPC（未完全）  
++ 18 武器前缀（可关闭）  
++ 友方弹幕透明度调节
+
+【小贴士】  
+• 剑鞘、军火库、魔法袋这类道具可以适应大部分武器；如有武器无法适配，请右键 Buff 取消掉召唤物。  
+• 武器【魔剑】合成材料“魔石”获得方式为：永夜御刃微光分解。
+• 剑鞘进行了除天顶剑、南瓜剑之外的原版适配，军火库、魔法袋并未进行原版适配，请见谅。
+• 当弹药数量堆叠到3996时，军火库默认为不消耗弹药。
+• 武器前缀与灾厄的取消随机重铸冲突，要体验模组前缀请先取消灾厄配置里的重铸修改。
+
+欢迎订阅体验！如有其他问题或建议，欢迎留言；如果喜欢此模组，请为它点点赞吧！
+
+────────────────  
+更新日志
+
+(v0.11) 2025 年 8 月 14 日  
+小更新一波：写了一把剑鞘，可以把所有近战武器塞进去进行御剑，实现万剑可御，拥有较强兼容性，支持其他模组武器。
+(v0.12) 2025 年 8 月 17 日  
+针对物品剑鞘的已知问题及其原版适配性进行了总体修改，现在可以适配大部分原版近战武器了，部分武器后续再适配。
+(v0.13) 2025 年 8 月 17 日  
+重铸物品丢失忘记改了，再更一下 (TAT)
+(v0.14) 2025 年 8 月 24 日  
+新增物品：军火库、魔法袋、箭袋、圣焰十字架、大师之剑。新增 NPC 一位，还有一些调整，具体详情可看更新描述。
+(v0.15) 2025 年 8 月 28 日
+削弱一些合成御剑的效果让他们看起来不是太离谱。新加十几种武器前缀词，可在模组配置里开启关闭。修复一些BUG。
+(v0.16) 2025 年 8 月 30 日
+新增物品：坐骑徽章。修复前缀王牌BUG，修复剑鞘放入鞭子问题。
+(v0.17) 2025 年 9 月 2 日
+修改饰品前缀属性，修复坐骑徽章模组冲突bug，修复御剑刀光弹幕受一些坐骑影响bug，剑鞘新增一个基础逻辑。
+(v0.18) 2025 年 11 月 29 日
+新增物品：7把新御剑。增加剑鞘等物品的拖尾开关。优化模组配置，增加平衡配置开关，超模词条开关。增加脊骨到腐肉的合成配方。
+(v0.19) 2026 年 2 月 15 日
+新增物品：神兵小将武器系列(未完全)，神秘火柴(春节限定款)，一些其他小东西(详情见更新介绍)。优化剑鞘等物品的帧率问题。
+(v0.20) 2026 年 2 月 18 日
+修复多人模组禁用问题，神兵小将武器左右键问题。
+(v0.21) 2026 年 3 月 1 日
+针对物品魔法袋、军火库的原版适配性进行了总体修改，现在可以适配大部分原版武器了
+(v0.22) 2026 年 5 月 22 日
+新增神兵小将系类物品，累计共20种，优化以前的诸多问题。
+(v0.23) 2026 年 5 月 23 日
+补充了虚无魔镜的合成方式
+
+
+
+
+
+
+
+「SwordMaster Mod – English Release Notes」  
+
+“When you can command nearly every weapon to fight for you, how will it feel?”  
+
+The SwordMaster Mod has arrived!  It takes many existing swords from vanilla Terraria and re-creates them as summonable “Flying Swords” for summoners.  
+• Attack style: based on the Terra Prism, but with more varied effects.  
+• Current top craft: Terra Blade – more swords are coming soon.
+
+Content so far  
++ 70 items  
++ 1 town NPC (WIP)  
++ 18 weapon prefixes (toggleable)  
++ Friendly-projectile transparency slider  
+
+Quick tips  
+– Items like Scabbard, Armory, and Magic Bag can adapt most weapons. If a weapon refuses to adapt, right-click its buff to dismiss the summon.  
+– Material “Demon Stone” for the Demonblade is obtained by shimmer-decomposing the Night’s Edge summon version.
+– Scabbard now supports all vanilla melee weapons except Zenith and The Horseman’s Blade. Armory and Magic Bag have **not** been adapted for vanilla gear—sorry for the inconvenience.  
+– When ammo stacks reach 3,996, Armory defaults to **no ammo consumption**.  
+– Weapon prefixes conflict with Calamity’s “disable random reforge.” To use this mod’s prefixes, first turn off Calamity’s reforge tweaks in its config.
+
+Enjoy the mod!  Leave feedback or bug reports below.  If you like it, give us a thumbs-up!
+
+──────────────────────────  
+Changelog  
+
+(v0.11) Aug 14 2025 – Added Scabbard: insert any melee weapon to turn it into a Flying Sword. Universal compatibility, supports mod weapons.  
+(v0.12) Aug 17 2025 – Hotfix: improved Scabbard compatibility with vanilla melee weapons; remaining weapons will follow.  
+(v0.13) Aug 17 2025 – Fixed reforge-loss bug (oops).  
+(v0.14) Aug 24 2025 – New items: Armory, Magic Bag, Quiver, Sacred Cross, Master Sword. Added new NPC and various tweaks—see full patch notes for details.
+(v0.15) Aug 28 2025 – Rebalanced several crafted Flying Swords so they no longer feel overpowered.Added a dozen new weapon prefixes—toggle them on/off in the mod config.Fixed various bugs.
+(v0.16) Aug 30 2025 – New item: Mount Badge.Fixed the Ace prefix bug and resolved an issue with whips being placed in the Scabbard.
+(v0.16) Sep 2 2025 – Modified the prefix attributes of accessories, fixed the bug of mount badge mod conflicts, fixed the bug that the sword light barrage was affected by some mounts, and added a basic logic to the scabbard.
+(v0.16) Nov 29 2025 – Newly added items: 7 new swords. Added trailing switches for scabbards and other items. Optimize module configuration, add balance configuration switch and super-module entry switch.A crafting recipe that adds spines to carrion.
+(v0.19) Feb 15 2026 – New items: Divine General weapon series (incomplete), Matchbox (Spring Festival limited), and several other small additions (see update notes for details). Optimized the frame rate of Scabbard and related items.
+(v0.20) Feb 18 2026 – Fixed multiplayer mod disable issue, fixed Divine General weapon left/right click issues.
+(v0.21) Mar 1 2026 – Overhauled vanilla compatibility for Magic Bag and Armory: they can now adapt to most vanilla weapons.
+(v0.22) May 22, 2026 - Added the Divine General weapon series, now totaling 20 types. Optimized and improved many previous issues.
+(v0.23) May 23, 2026 - Added the crafting recipe for the Void Mirror.

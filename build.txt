@@ -1,0 +1,3 @@
+﻿displayName = SwordMastery
+author = 君倾烟尘
+version = 0.23

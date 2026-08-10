@@ -1,0 +1,913 @@
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using SwordMastery.Content.GlobaProjectiles;
+using SwordMastery.Content.Items.FlyingSword.BladeForge;
+using SwordMastery.Content.Items.FlyingSword.Glaive;
+using System;
+using Terraria;
+using Terraria.DataStructures;
+using Terraria.GameContent;
+using Terraria.GameContent.Creative;
+using Terraria.GameContent.Drawing;
+using Terraria.ID;
+using Terraria.Map;
+using Terraria.ModLoader;
+using Vector2 = Microsoft.Xna.Framework.Vector2;
+
+namespace SwordMastery.Content.Items.FlyingSword.Glaive_H
+{
+    class FlyingTizonaSword : ModItem
+    {
+        private readonly Texture2D texture = ModContent.Request<Texture2D>("SwordMastery/Content/Items/FlyingSword/Glaive_H/FlyingTizonaSword").Value;
+        private readonly Texture2D texture_ = ModContent.Request<Texture2D>("SwordMastery/Content/Items/FlyingSword/Glaive_H/FlyingTizonaSword_").Value;
+        public override void SetStaticDefaults()
+        {
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;//这让这个物品在研究时只需要1个
+            ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true; //这让控制器玩家可以在全屏范围内选择目标
+            ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;//这让锁定目标时不会发生碰撞
+        }
+
+        public override void SetDefaults()
+        {
+            //Item.CloneDefaults(ItemID.EmpressBlade);
+            Item.damage = 28;
+            Item.mana = 10;
+            Item.width = 52;
+            Item.height = 52;
+            Item.useTime = 25;
+            Item.useAnimation = 25;
+            Item.useStyle = ItemUseStyleID.Swing;
+            Item.noMelee = true;
+            Item.knockBack = 2.5f;
+            Item.value = 20000;
+            Item.rare = ItemRarityID.Pink;
+            Item.UseSound = SoundID.Item100;
+            Item.shoot = ModContent.ProjectileType<FlyingTizonaSwordProj>();
+            Item.shootSpeed = 16f;
+            Item.buffType = ModContent.BuffType<BuffsFlyingTizonaSword>();
+            Item.DamageType = DamageClass.Summon;
+            // 读取配置并调整伤害
+            var config = ModContent.GetInstance<SwordMasteryConfig>();
+            if (config.StrengthExperience == StrengthMode.Ordinary)
+            {
+                Item.damage = (int)(Item.damage * 0.6f);
+            }
+        }
+        public override bool PreDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
+        {
+            Rectangle sourceRectangle = new Rectangle(0, 0, texture.Width, texture.Height);
+            spriteBatch.Draw(texture, position, sourceRectangle, drawColor, 0f, origin, scale, SpriteEffects.None, 0f);
+            spriteBatch.Draw(texture_, position, sourceRectangle, drawColor, 0f, origin, scale, SpriteEffects.None, 0f);
+            return false;
+        }
+
+        public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
+        {
+            Rectangle sourceRectangle = new Rectangle(0, 0, texture.Width, texture.Height);
+            Vector2 drawPosition = Item.Bottom - Main.screenPosition - new Vector2(0, texture.Height / 2);
+            Vector2 origin = new Vector2(texture.Width / 2, texture.Height / 2);
+            spriteBatch.Draw(texture, drawPosition, sourceRectangle, lightColor, rotation, origin, scale, SpriteEffects.None, 0f);
+            spriteBatch.Draw(texture_, drawPosition, sourceRectangle, Color.White * 0.8f, rotation, origin, scale, SpriteEffects.None, 0f);
+            return false;
+        }
+        public override void PostUpdate()
+        {
+            float intensity = 1f; // 控制光芒强度，越小越淡
+            //Color(139, 136, 216)
+            //•	R: 139 / 255 ≈ 0.55
+            //•	G: 136 / 255 ≈ 0.53
+            //•	B: 216 / 255 ≈ 0.85
+            Lighting.AddLight(Item.Center, 0.55f * intensity, 0.53f * intensity, 0.85f * intensity);
+        }
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+        {
+            player.AddBuff(ModContent.BuffType<BuffsFlyingTizonaSword>(), 3600);
+            player.SpawnMinionOnCursor(source, player.whoAmI, type, Item.damage, knockback);
+            return false;
+        }
+        //public override bool MeleePrefix()
+        //{
+        //    return true; // 返回 true 以允许武器具有近战前缀（例如：传奇）
+        //}
+        public override void AddRecipes()
+        {
+            // 创建一个新的配方组
+            RecipeGroup group = new RecipeGroup(() => "精金锭或钛金锭",
+                ItemID.AdamantiteBar,
+                ItemID.TitaniumBar);
+            // 注册配方组
+            RecipeGroup.RegisterGroup("SwordMastery:AdamantiteBarOrTitaniumBar", group);
+
+            CreateRecipe()
+               .AddIngredient(ModContent.ItemType<FlyingExcalibur>(), 1)
+               .AddIngredient(ItemID.SoulofFright, 5)
+               .AddIngredient(ItemID.SoulofMight, 5)
+               .AddIngredient(ItemID.SoulofSight, 5)
+               .AddRecipeGroup("SwordMastery:AdamantiteBarOrTitaniumBar", 15)
+               .AddTile(ModContent.TileType<BladeForgeTile>())
+               .Register();
+        }
+    }
+    public class FlyingTizonaSwordProj : ModProjectile
+    {
+        public override string Texture => GetType().Namespace.Replace(".", "/") + "/FlyingTizonaSword";
+        NPC targetNPC = null;
+        public override void SetStaticDefaults()
+        {
+            ProjectileID.Sets.MinionTargettingFeature[Projectile.type] = true;
+            ProjectileID.Sets.MinionSacrificable[Projectile.type] = true;
+            //ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = true;
+            // 标记为宠物召唤物
+            Main.projPet[Projectile.type] = true;
+
+            Main.projFrames[Type] = 1;
+            ProjectileID.Sets.TrailingMode[Type] = 2;
+            ProjectileID.Sets.TrailCacheLength[Type] = 12;
+
+        }
+        public override void SetDefaults()
+        {
+            Projectile.CloneDefaults(ProjectileID.EmpressBlade);
+            AIType = ProjectileID.EmpressBlade;
+            Projectile.hide = false;
+            Projectile.minion = true;
+            //Projectile.minionSlots = 0;
+            Projectile.timeLeft = 2;
+            Projectile.height = Projectile.width = 10;
+            Projectile.minionSlots = 1;
+            Projectile.light = 0.2f;
+            Projectile.extraUpdates = 0; // 0为正常速度，-1为更慢（tModLoader允许为负数）
+        }
+        
+        public override void OnSpawn(IEntitySource source)
+        {
+            //SoundEngine.PlaySound(SoundID.Item100); // 播放声音
+            base.OnSpawn(source);
+        }
+        private readonly int MaxDis = 800;
+        public override bool MinionContactDamage()
+        {
+            if(FindNPC(MaxDis) > 0 && FindNPC(MaxDis) < Main.npc.Length || Projectile.ai[0] != 0)
+            return true;
+            return base.MinionContactDamage();
+        }
+        private int FindNPC(int dis)
+        {
+            return Projectile.FindTargetWithLineOfSight(dis);
+        }
+       
+        //private float slowAcc = 0f;
+        public override bool PreAI()
+        {
+            var player = Main.player[Projectile.owner];
+            if (!player.dead && player.HasBuff(ModContent.BuffType<BuffsFlyingTizonaSword>()))
+            {
+                Projectile.timeLeft = 2;
+            }
+            if (!player.HasBuff(ModContent.BuffType<BuffsFlyingTizonaSword>())) Projectile.Kill();
+
+            ////修改此参数以确定攻击范围
+            //var MaxDis = 500;
+            var n = FindNPC(MaxDis);
+            if (n >= 0 && n < Main.npc.Length || Projectile.ai[0] != 0)
+            {
+                if (targetNPC != null && targetNPC.active && (Projectile.ai[0] == 68 || Projectile.ai[0] == 1))
+                {
+                    ////随机值
+                    float rand = Main.rand.NextFloat(0.5f, 2f);
+                    // 获取玩家
+                    Vector2 projectileTotarget = targetNPC.Center - Projectile.Center;
+
+                    // 计算垂直于玩家与鼠标线段的方向
+                    Vector2 perpendicularDirection = Vector2.Normalize(new Vector2(-projectileTotarget.Y, projectileTotarget.X)); // 垂直方向（顺时针90度）
+
+                    var proj = Projectile.NewProjectileDirect(
+                        Projectile.GetSource_FromThis(),
+                        Projectile.Center,
+                        perpendicularDirection*12,
+                        ModContent.ProjectileType<FlyingTizonaSwordProj_P>(),
+                        (int)(Projectile.damage * Main.rand.NextFloat(1f, 1.6f)),
+                        Projectile.knockBack,
+                        Projectile.owner,
+                        rand,
+                        targetNPC != null ? targetNPC.whoAmI : 0, 1f);
+                    if (proj.ModProjectile is FlyingTizonaSwordProj_P customProj)
+                        customProj.Initialize(4f, 40f, 0.4f);
+                    var proj_ = Projectile.NewProjectileDirect(
+                        Projectile.GetSource_FromThis(),
+                        Projectile.Center,
+                        -perpendicularDirection*12,
+                        ModContent.ProjectileType<FlyingTizonaSwordProj_P>(),
+                        (int)(Projectile.damage * Main.rand.NextFloat(1f, 1.6f)),
+                        Projectile.knockBack,
+                        Projectile.owner,
+                        rand,
+                        targetNPC != null ? targetNPC.whoAmI : 0);
+                    if (proj_.ModProjectile is FlyingTizonaSwordProj_P customProj_)
+                        customProj_.Initialize(4f, 40f, 0.4f);
+                }
+                return base.PreAI();
+            }
+            
+            Projectile.ai[2] = 0;
+            foreach (var p in Main.projectile)
+            {
+                if (p != null && p.active && SwordProjectileGroup.AllTypes.Contains(p.type))
+                    if (p.whoAmI < Projectile.whoAmI) Projectile.ai[2]++;
+            }
+
+            #region 以下：魔改原版的代码
+            int num3 = (int)Projectile.ai[2] + 1;
+            var idleRotation3 = num3 * ((float)Math.PI * 2f) * (1f / 60f) * player.direction + (float)Math.PI / 2f;
+            idleRotation3 = MathHelper.WrapAngle(idleRotation3);
+            int num4 = (int)(num3 % idleRotation3);
+            Vector2 vector = new Vector2(0f, 0.5f).RotatedBy((player.miscCounterNormalized * (2f + num4) + num4 * 0.5f + player.direction * 1.3f) * ((float)Math.PI * 2f)) * 4f;
+            var idleSpot = Projectile.rotation.ToRotationVector2() * 10f + player.MountedCenter + new Vector2(player.direction * (num3 * -6 - 16), player.gravDir * -15f);
+            idleSpot += vector + new Vector2(8, 8);
+            idleRotation3 += (float)Math.PI / 2f;
+
+            Projectile.rotation = Projectile.rotation.AngleLerp(idleRotation3, 0.45f);
+            Projectile.Center = Vector2.SmoothStep(Projectile.Center, idleSpot, 0.45f);
+            for (int i = 0; i < Projectile.localNPCImmunity.Length; i++)
+            {
+                Projectile.localNPCImmunity[i] = 0;
+            }
+            #endregion
+
+            return false;
+        }
+        private int clown = 0;// 攻击冷却
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            base.OnHitNPC(target, hit, damageDone);
+            var player = Main.player[Projectile.owner];
+            player.GetModPlayer<FlyingTizonaSwordPlayer>().TizonaattackspeedTimer = 120;
+
+            // 冷却判定
+            if (clown > 0)
+                return;
+            targetNPC = target;
+            
+            float radius = 40f; // 距离目标中心的半径
+            float angle = (float)Math.Atan2(target.Center.X - Projectile.Center.X, target.Center.Y - Projectile.Center.Y);
+            //随机值
+            float rand = Main.rand.NextFloat(0.5f, 2f);
+            Vector2 spawnPos = target.Center + radius * angle.ToRotationVector2();
+            Vector2 velocity = (target.Center - spawnPos).SafeNormalize(Vector2.UnitY) * 8f; // 朝向目标中心
+
+            if (target.CanBeChasedBy(Projectile.owner))
+            {
+                clown = 30;
+                var proj__ = Projectile.NewProjectileDirect(
+                    Projectile.GetSource_FromThis(),
+                    spawnPos,
+                    velocity,
+                    ModContent.ProjectileType<FlyingTizonaSwordProj_>(),
+                    (int)(Projectile.damage * Main.rand.NextFloat(1f, 1.6f)),
+                    Projectile.knockBack,
+                    Projectile.owner,
+                    rand, 1f);
+                if (proj__.ModProjectile is FlyingTizonaSwordProj_ customProj__)
+                    customProj__.Initialize(-2f, 30f, 0.8f);
+                var proj___ = Projectile.NewProjectileDirect(
+                    Projectile.GetSource_FromThis(),
+                    spawnPos,
+                    velocity,
+                    ModContent.ProjectileType<FlyingTizonaSwordProj_>(),
+                    (int)(Projectile.damage * Main.rand.NextFloat(1f, 1.6f)),
+                    Projectile.knockBack,
+                    Projectile.owner,
+                    rand);
+                if (proj___.ModProjectile is FlyingTizonaSwordProj_ customProj___)
+                    customProj___.Initialize(2f, 30f, 0.8f);
+            }
+        }
+        public override void AI()
+        {
+            // 冷却递减
+            if (clown > 0)
+                clown--;
+        }
+        public override bool PreDrawExtras()
+        {
+            return base.PreDrawExtras();
+        }
+        private bool flag = false;
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Texture2D texture_ = TextureAssets.Projectile[Type].Value ;
+            Rectangle rectangle = new Rectangle(
+                0,
+                texture_.Height / Main.projFrames[Type] * Projectile.frame,
+                texture_.Width, 
+                texture_.Height / Main.projFrames[Type]
+                );
+            SpriteEffects effects; // 贴图效果
+            float rotationOffset;
+            var player = Main.player[Projectile.owner];
+            var n = FindNPC(MaxDis);
+            if (!(n >= 0 && n < Main.npc.Length || Projectile.ai[0] != 0))
+            {
+                if (player.direction == -1)
+                {
+                    rotationOffset = 0f;
+                    effects = SpriteEffects.None; // 贴图不翻转
+                }
+                else
+                {
+                    rotationOffset = MathHelper.ToRadians(90f); // 旋转偏移135度
+                    effects = SpriteEffects.FlipHorizontally; // 翻转贴图
+                }
+            }
+            else
+            {
+                if (Projectile.ai[0] > 0 && Projectile.ai[0] < 40 && n >= 0 && n < Main.npc.Length)
+                {
+                    if (Main.npc[n] != null && Projectile.Center.X <= Main.npc[n].Center.X)
+                    {
+                        flag = true;
+                    }
+                    if (Main.npc[n] != null && Projectile.Center.X >= Main.npc[n].Center.X)
+                    {
+                        flag = false;
+                    }
+                }
+                if (flag)
+                {
+                    rotationOffset = 0f;
+                    effects = SpriteEffects.None; // 贴图不翻转
+                }
+                else
+                {
+                    rotationOffset = MathHelper.ToRadians(90f); // 旋转偏移135度
+                    effects = SpriteEffects.FlipHorizontally; // 翻转贴图
+                }
+            }
+            //var value = (float)(Math.Cos(Main.timeForVisualEffects * 0.04 + Projectile.ai[2] * 0.7) * 0.3f + 0.4f);
+            //var lig = lightColor.ToVector3().Length() / 1.75f;
+            //var v3 = Main.rgbToHsl(Color.OrangeRed);
+            //v3.X += ((float)Math.Cos(Main.timeForVisualEffects * 0.06 + Projectile.ai[2] * 0.5) * 0.5f + 0.5f) * 0.1f;
+            //var c = Main.hslToRgb(v3) * lig;
+            //c.A = 0;
+            // 使用自定义颜色
+            Color LightsColor = new Color(139, 136, 216);
+            var value = (float)(Math.Cos(Main.timeForVisualEffects * 0.04 + Projectile.ai[2] * 0.7) * 0.3f + 0.4f);
+            var v3 = Main.rgbToHsl(LightsColor);
+            v3.X += ((float)Math.Cos(Main.timeForVisualEffects * 0.06 + Projectile.ai[2] * 0.5) * 0.5f + 0.5f) * 0.01f;
+            var c = Main.hslToRgb(v3) /** lig*/;
+            c.A = 0;
+
+            Color MyColor = c * (0.4f / 3f);
+            MyColor.A = 0;
+            int maxStep = ProjectileID.Sets.TrailCacheLength[Type] - 7;
+            if (Projectile.ai[0] != 0) maxStep += 7;
+            for (int i = 1; i < maxStep; i++)
+            {
+                for (float j = 0; j < 1; j += 0.3f)
+                {
+                    float factor = (1 - (float)i / ProjectileID.Sets.TrailCacheLength[Type]) * 0.7f + 0.4f;
+                    Vector2 oldcenter = Vector2.Lerp(Projectile.oldPos[i], Projectile.oldPos[i - 1], j) + Projectile.Size / 2 - Main.screenPosition;
+                    var oldRo = MathHelper.Lerp(Projectile.oldRot[i], Projectile.oldRot[i - 1], j) - MathHelper.PiOver2 + MathHelper.PiOver4;
+                    Main.EntitySpriteDraw(texture_,
+                                          oldcenter,
+                                          rectangle,
+                                          MyColor * factor,
+                                          oldRo + rotationOffset,
+                                          new Vector2(texture_.Width / 2, texture_.Height / 2 / Main.projFrames[Type]),
+                                          Projectile.scale * 1.5f * factor,
+                                          effects,
+                                          0);
+                }
+            }
+
+            Main.EntitySpriteDraw(
+                texture_,
+                Projectile.Center - Main.screenPosition,
+                rectangle,
+                lightColor,
+                Projectile.rotation - MathHelper.PiOver2 + MathHelper.PiOver4 + rotationOffset,
+                new Vector2(texture_.Width / 2, texture_.Height / 2 / Main.projFrames[Type]),
+                Projectile.scale * 1.5f,
+                effects,
+                0
+                );
+            #region 以下：渐变高光
+
+            for (int i = 0; i < 2; i++)
+            {
+                Main.EntitySpriteDraw(texture_,
+                                      Projectile.Center - Main.screenPosition,
+                                      rectangle,
+                                      c * value * 0.6f,
+                                      Projectile.rotation - MathHelper.PiOver2 + MathHelper.PiOver4 + rotationOffset,
+                                      new Vector2(texture_.Width / 2, texture_.Height / 2 / Main.projFrames[Type]),
+                                      Projectile.scale * 1.5f,
+                                      effects,
+                                      0);
+            }
+            #endregion
+            return false; // 阻止默认绘制
+        }
+    }
+    public class FlyingTizonaSwordProj_ : ModProjectile
+    {
+        public override string Texture => "Terraria/Images/Projectile_" + ProjectileID.NightsEdge;
+
+        // 自定义参数，替代 ai[0]、ai[1]、ai[2]
+        private float direction;
+        private float maxTime;
+        private float scaleFactor;
+        private float currentTime;
+
+        public override void SetStaticDefaults()
+        {
+            Main.projFrames[Type] = 4;
+        }
+
+        public override void SetDefaults()
+        {
+            Projectile.width = 16;
+            Projectile.height = 16;
+            Projectile.friendly = true;
+            Projectile.hostile = false;
+            Projectile.DamageType = DamageClass.Summon;
+            Projectile.penetrate = -1;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = -1;
+            Projectile.tileCollide = false;
+            Projectile.ignoreWater = true;
+            Projectile.timeLeft = 30;
+            Projectile.stopsDealingDamageAfterPenetrateHits = true;
+            Projectile.aiStyle = -1;
+            Projectile.noEnchantmentVisuals = true;
+
+            // 默认参数
+            direction = 1f;
+            maxTime = 30f;
+            scaleFactor = 1f;
+            currentTime = 0f;
+        }
+
+        // 提供一个初始化方法，便于外部传参
+        public void Initialize(float dir, float maxT, float scale)
+        {
+            direction = dir;
+            maxTime = maxT;
+            scaleFactor = scale;
+            currentTime = 0f;
+        }
+
+        public override void AI()
+        {
+            currentTime++;
+            Player player = Main.player[Projectile.owner];
+            float percentageOfLife = currentTime / maxTime;
+            float velocityRotation = Projectile.velocity.ToRotation();
+            float adjustedRotation = MathHelper.Pi * direction * percentageOfLife + velocityRotation + direction * MathHelper.Pi + player.fullRotation;
+            Projectile.rotation = adjustedRotation;
+
+            float scaleMulti = 0.6f;
+            float scaleAdder = 1f;
+
+            Projectile.Center -= Projectile.velocity;
+            Projectile.scale = (scaleAdder + percentageOfLife * scaleMulti) * scaleFactor;
+
+            // 粒子特效
+            float dustRotation = Projectile.rotation + Main.rand.NextFloatDirection() * MathHelper.PiOver2 * 0.7f;
+            Vector2 dustPosition = Projectile.Center + dustRotation.ToRotationVector2() * 86f * Projectile.scale;
+            Vector2 dustVelocity = (dustRotation + direction * MathHelper.PiOver2).ToRotationVector2();
+
+            if (Main.rand.NextFloat() * 2.6f < Projectile.Opacity * 0.2f)
+            {
+                Dust dust = Dust.NewDustPerfect(dustPosition, DustID.Clentaminator_Blue, dustVelocity, 100, Color.Purple * Projectile.Opacity, 1.2f * Projectile.Opacity);
+                dust.scale *= 1.2f;
+                dust.noGravity = true;
+            }
+
+            // 视觉特效
+            for (float i = -MathHelper.PiOver4; i <= MathHelper.PiOver4; i += MathHelper.PiOver2)
+            {
+                Rectangle rectangle = Utils.CenteredRectangle(Projectile.Center + (Projectile.rotation + i).ToRotationVector2() * 70f * Projectile.scale, new Vector2(60f * Projectile.scale, 60f * Projectile.scale));
+                Projectile.EmitEnchantmentVisualsAt(rectangle.TopLeft(), rectangle.Width, rectangle.Height);
+            }
+
+            // 生命周期结束时销毁
+            if (currentTime >= maxTime)
+            {
+                Projectile.Kill();
+            }
+        }
+
+        public override bool? Colliding(Rectangle projHitbox, Rectangle targetHitbox)
+        {
+            float coneLength = 86f * Projectile.scale;
+            float collisionRotation = MathHelper.Pi * 2f / 25f * direction;
+            float maximumAngle = MathHelper.PiOver4;
+            float coneRotation = Projectile.rotation + collisionRotation;
+
+            if (targetHitbox.IntersectsConeSlowMoreAccurate(Projectile.Center, coneLength, coneRotation, maximumAngle))
+            {
+                return true;
+            }
+
+            float backOfTheSwing = Utils.Remap(currentTime, maxTime * 0.3f, maxTime * 0.5f, 1f, 0f);
+            if (backOfTheSwing > 0f)
+            {
+                float coneRotation2 = coneRotation - MathHelper.PiOver4 * direction * backOfTheSwing;
+                if (targetHitbox.IntersectsConeSlowMoreAccurate(Projectile.Center, coneLength, coneRotation2, maximumAngle))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public override void CutTiles()
+        {
+            Vector2 starting = (Projectile.rotation - MathHelper.PiOver4).ToRotationVector2() * 60f * Projectile.scale;
+            Vector2 ending = (Projectile.rotation + MathHelper.PiOver4).ToRotationVector2() * 60f * Projectile.scale;
+            float width = 60f * Projectile.scale;
+            Utils.PlotTileLine(Projectile.Center + starting, Projectile.Center + ending, width, DelegateMethods.CutTiles);
+        }
+
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            if (Projectile.damage > 0)
+                Projectile.damage = (int)(Projectile.damage * 0.75f);
+            ParticleOrchestrator.RequestParticleSpawn(clientOnly: false, ParticleOrchestraType.NightsEdge,
+                new ParticleOrchestraSettings { PositionInWorld = Main.rand.NextVector2FromRectangle(target.Hitbox) },
+                Projectile.owner);
+            target.AddBuff(153, 60);
+            hit.HitDirection = (Main.player[Projectile.owner].Center.X < target.Center.X) ? 1 : (-1);
+        }
+
+        public override bool CanHitPvp(Player target) => base.CanHitPvp(target);
+        public override bool CanHitPlayer(Player target) => false;
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Vector2 position = Projectile.Center - Main.screenPosition;
+            Texture2D texture = TextureAssets.Projectile[Type].Value;
+            Rectangle sourceRectangle = texture.Frame(1, 4);
+            Vector2 origin = sourceRectangle.Size() / 2f;
+            float scale = Projectile.scale * 0.9f;
+            SpriteEffects spriteEffects = (!(direction >= 0f)) ? SpriteEffects.FlipVertically : SpriteEffects.None;
+            float percentageOfLife = currentTime / maxTime;
+            float lerpTime = Utils.Remap(percentageOfLife, 0f, 0.6f, 0f, 1f) * Utils.Remap(percentageOfLife, 0.6f, 1f, 1f, 0f);
+            float lightingColor = Lighting.GetColor(Projectile.Center.ToTileCoordinates()).ToVector3().Length() / (float)Math.Sqrt(3.0);
+            lightingColor = Utils.Remap(lightingColor, 0.2f, 1f, 0f, 1f);
+
+            Color backDarkColor = new(97, 94, 204);
+            Color middleMediumColor = new(97, 94, 204);
+            Color frontLightColor = new(97, 94, 204);
+
+            Color whiteTimesLerpTime = Color.White * lerpTime * 0.5f;
+            whiteTimesLerpTime.A = (byte)(whiteTimesLerpTime.A * (1f - lightingColor));
+            Color faintLightingColor = whiteTimesLerpTime * lightingColor * 0.5f;
+            faintLightingColor.G = (byte)(faintLightingColor.G * lightingColor);
+            faintLightingColor.B = (byte)(faintLightingColor.R * (0.25f + lightingColor * 0.75f));
+
+            Main.EntitySpriteDraw(texture, position, sourceRectangle, backDarkColor /* lightingColor*/ * lerpTime, Projectile.rotation + direction * MathHelper.PiOver4 * -1f * (1f - percentageOfLife), origin, scale, spriteEffects, 0f);
+            Main.EntitySpriteDraw(texture, position, sourceRectangle, faintLightingColor * 0.15f, Projectile.rotation + direction * 0.01f, origin, scale, spriteEffects, 0f);
+            Main.EntitySpriteDraw(texture, position, sourceRectangle, middleMediumColor /* lightingColor*/ * lerpTime * 0.3f, Projectile.rotation, origin, scale, spriteEffects, 0f);
+            Main.EntitySpriteDraw(texture, position, sourceRectangle, frontLightColor /* lightingColor*/ * lerpTime * 0.5f, Projectile.rotation, origin, scale * 0.975f, spriteEffects, 0f);
+            Main.EntitySpriteDraw(texture, position, texture.Frame(1, 4, 0, 3), Color.White * 0.6f * lerpTime, Projectile.rotation + direction * 0.01f, origin, scale, spriteEffects, 0f);
+            Main.EntitySpriteDraw(texture, position, texture.Frame(1, 4, 0, 3), Color.White * 0.5f * lerpTime, Projectile.rotation + direction * -0.05f, origin, scale * 0.8f, spriteEffects, 0f);
+            Main.EntitySpriteDraw(texture, position, texture.Frame(1, 4, 0, 3), Color.White * 0.4f * lerpTime, Projectile.rotation + direction * -0.2f, origin, scale * 0.6f, spriteEffects, 0f);
+
+            for (float i = 0f; i < 8f; i += 1f)
+            {
+                float edgeRotation = Projectile.rotation + direction * i * (MathHelper.Pi * -2f) * 0.025f + Utils.Remap(percentageOfLife, 0f, 1f, 0f, MathHelper.PiOver4) * direction;
+                Vector2 drawPos = position + edgeRotation.ToRotationVector2() * ((float)texture.Width * 0.5f - 6f) * scale;
+                DrawPrettyStarSparkle(Projectile.Opacity, SpriteEffects.None, drawPos, new Color(255, 255, 255, 0) * lerpTime * (i / 9f), middleMediumColor, percentageOfLife, 0f, 0.5f, 0.5f, 1f, edgeRotation, new Vector2(0f, Utils.Remap(percentageOfLife, 0f, 1f, 3f, 0f)) * scale, Vector2.One * scale);
+            }
+
+            Vector2 drawPos2 = position + (Projectile.rotation + Utils.Remap(percentageOfLife, 0f, 1f, 0f, MathHelper.PiOver4) * direction).ToRotationVector2() * ((float)texture.Width * 0.5f - 4f) * scale;
+            DrawPrettyStarSparkle(Projectile.Opacity, SpriteEffects.None, drawPos2, new Color(255, 255, 255, 0) * lerpTime * 0.5f, middleMediumColor, percentageOfLife, 0f, 0.5f, 0.5f, 1f, 0f, new Vector2(2f, Utils.Remap(percentageOfLife, 0f, 1f, 4f, 1f)) * scale, Vector2.One * scale);
+
+            return false;
+        }
+
+        private static void DrawPrettyStarSparkle(float opacity, SpriteEffects dir, Vector2 drawPos, Color drawColor, Color shineColor, float flareCounter, float fadeInStart, float fadeInEnd, float fadeOutStart, float fadeOutEnd, float rotation, Vector2 scale, Vector2 fatness)
+        {
+            Texture2D sparkleTexture = TextureAssets.Extra[ExtrasID.SharpTears].Value;
+            Color bigColor = shineColor * opacity * 0.5f;
+            bigColor.A = 0;
+            Vector2 origin = sparkleTexture.Size() / 2f;
+            Color smallColor = drawColor * 0.5f;
+            float lerpValue = Utils.GetLerpValue(fadeInStart, fadeInEnd, flareCounter, clamped: true) * Utils.GetLerpValue(fadeOutEnd, fadeOutStart, flareCounter, clamped: true);
+            Vector2 scaleLeftRight = new Vector2(fatness.X * 0.5f, scale.X) * lerpValue;
+            Vector2 scaleUpDown = new Vector2(fatness.Y * 0.5f, scale.Y) * lerpValue;
+            bigColor *= lerpValue;
+            smallColor *= lerpValue;
+            Main.EntitySpriteDraw(sparkleTexture, drawPos, null, bigColor, MathHelper.PiOver2 + rotation, origin, scaleLeftRight, dir);
+            Main.EntitySpriteDraw(sparkleTexture, drawPos, null, bigColor, 0f + rotation, origin, scaleUpDown, dir);
+            Main.EntitySpriteDraw(sparkleTexture, drawPos, null, smallColor, MathHelper.PiOver2 + rotation, origin, scaleLeftRight * 0.6f, dir);
+            Main.EntitySpriteDraw(sparkleTexture, drawPos, null, smallColor, 0f + rotation, origin, scaleUpDown * 0.6f, dir);
+        }
+    }
+    public class FlyingTizonaSwordProj_P : ModProjectile
+    {
+        public override string Texture => "Terraria/Images/Projectile_" + ProjectileID.TrueNightsEdge;
+        private Vector2 initialVelocity;
+        private Vector2 targetPosition;
+        private int timer;
+        private bool hasReachedTarget;
+
+        // 自定义参数，替代 ai[0]、ai[1]、ai[2]
+        private float direction;
+        private float maxTime;
+        private float scaleFactor;
+        private float currentTime;
+
+        public override void SetStaticDefaults()
+        {
+            Main.projFrames[Type] = 4;
+        }
+
+        public override void SetDefaults()
+        {
+            Projectile.width = 16;
+            Projectile.height = 16;
+            Projectile.friendly = true;
+            Projectile.hostile = false;
+            Projectile.DamageType = DamageClass.Summon;
+            Projectile.penetrate = -1;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = -1;
+            Projectile.tileCollide = false;
+            Projectile.ignoreWater = true;
+            Projectile.timeLeft = 180;
+            Projectile.stopsDealingDamageAfterPenetrateHits = true;
+            Projectile.aiStyle = -1;
+            Projectile.noEnchantmentVisuals = true;
+
+            // 默认参数
+            direction = 1f;
+            maxTime = 30f;
+            scaleFactor = 1f;
+            currentTime = 0f;
+        }
+
+        // 提供一个初始化方法，便于外部传参
+        public void Initialize(float dir, float maxT, float scale)
+        {
+            direction = dir;
+            maxTime = 60;
+            scaleFactor = scale;
+            currentTime = 0f;
+        }
+        
+        // 找到最近的敌人
+        public NPC FindClosestNPC(float maxDistance)
+        {
+            NPC closestNPC = null;
+            float closestDistance = maxDistance;
+
+            foreach (NPC npc in Main.npc)
+            {
+                if (npc.active && !npc.friendly && npc.lifeMax > 5 && !npc.dontTakeDamage && npc.damage > 0) // 只考虑活跃的、敌对的、生命值大于5的NPC
+                {
+                    float distance = Vector2.Distance(Projectile.Center, npc.Center);
+                    if (distance < closestDistance)
+                    {
+                        closestDistance = distance;
+                        closestNPC = npc;
+                    }
+                }
+            }
+
+            return closestNPC;
+        }
+        public override void AI()
+        {
+            // 弹幕的位置和速度
+            //if (timer == 0)
+            //{
+            //    //initialVelocity = Projectile.velocity;
+            //    //if (Projectile.ai[1] != 0)
+            //    //    targetPosition = Main.npc[(int)Projectile.ai[1]].Center;// 目标位置为鼠标位置
+            //    //else
+            //    //    targetPosition = Vector2.UnitY*10;
+            //}
+            NPC npc = Projectile.ai[1] != 0 ? Main.npc[(int)Projectile.ai[1]] : null;
+            timer++;
+
+            if (timer < 5) // 先向上或向下射出5帧
+            {
+                Projectile.velocity = Projectile.velocity;// 向上或向下射出
+            }
+            else // 然后向鼠标位置移动
+            {
+                if (npc != null && npc.active)// 还没有到达目标位置
+                {
+                    Vector2 direction = npc.Center - Projectile.Center;// 计算弹幕的方向
+                    direction.Normalize();
+                    direction *= 21f; // 设置弹幕的速度，10f 是弹幕的速度，可以根据需要调整
+
+                    Projectile.velocity = Vector2.Lerp(Projectile.velocity, direction, 0.05f);
+                }
+            }
+
+            currentTime++;
+            float percentageOfLife = currentTime / maxTime;
+            float velocityRotation = Projectile.velocity.ToRotation();
+            float adjustedRotation = MathHelper.Pi * direction * percentageOfLife * 2 + velocityRotation + direction * MathHelper.Pi;
+            Projectile.rotation = adjustedRotation;
+
+            float scaleMulti = 0.6f;
+            float scaleAdder = 1f;
+
+            //Projectile.Center = player.RotatedRelativePoint(Projectile.Center) - Projectile.velocity;
+            Projectile.scale = (scaleAdder + percentageOfLife * scaleMulti) * scaleFactor;
+
+            // 粒子特效
+            float dustRotation = Projectile.rotation + Main.rand.NextFloatDirection() * MathHelper.PiOver2 * 0.7f;
+            Vector2 dustPosition = Projectile.Center + dustRotation.ToRotationVector2() * 86f * Projectile.scale;
+            Vector2 dustVelocity = (dustRotation + direction * MathHelper.PiOver2).ToRotationVector2();
+
+            if (Main.rand.NextFloat() * 2.6f < Projectile.Opacity * 0.6f)
+            {
+                // 原版Excalibur颜色：Color.Gold, Color.White
+                Color dustColor = Color.Lerp(Color.Purple, Color.White, Main.rand.NextFloat() * 0.3f);
+                Dust coloredDust = Dust.NewDustPerfect(Projectile.Center + dustRotation.ToRotationVector2() * (Main.rand.NextFloat() * 80f * Projectile.scale + 20f * Projectile.scale), DustID.FireworksRGB, dustVelocity * 1f, 100, dustColor, 0.4f);
+                coloredDust.fadeIn = 0.2f + Main.rand.NextFloat() * 0.15f;
+                coloredDust.noGravity = true;
+
+            }
+            if (Main.rand.NextFloat() * 2.6f < Projectile.Opacity * 0.12f)
+            {
+                Dust dust = Dust.NewDustPerfect(dustPosition, DustID.Clentaminator_Blue, dustVelocity, 1, Color.Purple, Projectile.Opacity);
+                dust.noGravity = true;
+            }
+            // 视觉特效
+            for (float i = -MathHelper.PiOver4; i <= MathHelper.PiOver4; i += MathHelper.PiOver2)
+            {
+                Rectangle rectangle = Utils.CenteredRectangle(Projectile.Center + (Projectile.rotation + i).ToRotationVector2() * 70f * Projectile.scale, new Vector2(60f * Projectile.scale, 60f * Projectile.scale));
+                Projectile.EmitEnchantmentVisualsAt(rectangle.TopLeft(), rectangle.Width, rectangle.Height);
+            }
+
+            // 生命周期结束时销毁
+            if (currentTime >= maxTime)
+            {
+                Projectile.Kill();
+            }
+        }
+
+        public override bool? Colliding(Rectangle projHitbox, Rectangle targetHitbox)
+        {
+            float coneLength = 86f * Projectile.scale;
+            float collisionRotation = MathHelper.Pi * 2f / 25f * direction;
+            float maximumAngle = MathHelper.PiOver4;
+            float coneRotation = Projectile.rotation + collisionRotation;
+
+            if (targetHitbox.IntersectsConeSlowMoreAccurate(Projectile.Center, coneLength, coneRotation, maximumAngle))
+            {
+                return true;
+            }
+
+            float backOfTheSwing = Utils.Remap(currentTime, maxTime * 0.3f, maxTime * 0.5f, 1f, 0f);
+            if (backOfTheSwing > 0f)
+            {
+                float coneRotation2 = coneRotation - MathHelper.PiOver4 * direction * backOfTheSwing;
+                if (targetHitbox.IntersectsConeSlowMoreAccurate(Projectile.Center, coneLength, coneRotation2, maximumAngle))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public override void CutTiles()
+        {
+            Vector2 starting = (Projectile.rotation - MathHelper.PiOver4).ToRotationVector2() * 60f * Projectile.scale;
+            Vector2 ending = (Projectile.rotation + MathHelper.PiOver4).ToRotationVector2() * 60f * Projectile.scale;
+            float width = 60f * Projectile.scale;
+            Utils.PlotTileLine(Projectile.Center + starting, Projectile.Center + ending, width, DelegateMethods.CutTiles);
+        }
+
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            if (Projectile.damage > 0)
+                Projectile.damage = (int)(Projectile.damage * 0.8f);
+            else
+                Projectile.damage = 1;
+            if (Projectile.ai[2] != 0)
+                ParticleOrchestrator.RequestParticleSpawn(clientOnly: false, ParticleOrchestraType.NightsEdge,
+                     new ParticleOrchestraSettings { PositionInWorld = Main.rand.NextVector2FromRectangle(target.Hitbox) },
+                     Projectile.owner);
+            //var player = Main.player[Projectile.owner];
+            target.AddBuff(153, 60);
+            hit.HitDirection = Main.player[Projectile.owner].Center.X < target.Center.X ? 1 : -1;
+        }
+
+        public override bool CanHitPvp(Player target) => base.CanHitPvp(target);
+        public override bool CanHitPlayer(Player target) => false;
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Vector2 position = Projectile.Center - Main.screenPosition;
+            Texture2D texture = TextureAssets.Projectile[Type].Value;
+            Rectangle sourceRectangle = texture.Frame(1, 4);
+            Vector2 origin = sourceRectangle.Size() / 2f;
+            float scale = Projectile.scale * 0.9f;
+            SpriteEffects spriteEffects = !(direction >= 0f) ? SpriteEffects.FlipVertically : SpriteEffects.None;
+            float percentageOfLife = currentTime / maxTime;
+            float lerpTime = Utils.Remap(percentageOfLife, 0f, 0.6f, 0f, 1f) * Utils.Remap(percentageOfLife, 0.6f, 1f, 1f, 0f);
+            float lightingColor = Lighting.GetColor(Projectile.Center.ToTileCoordinates()).ToVector3().Length() / (float)Math.Sqrt(3.0);
+            lightingColor = Utils.Remap(lightingColor, 0.2f, 1f, 0f, 1f);
+
+            Color backDarkColor = new(97, 94, 204);
+            Color middleMediumColor = new(97, 94, 204);
+            Color frontLightColor = new(97, 94, 204);
+
+            Color whiteTimesLerpTime = new Color(97, 94, 204) * lerpTime * 0.5f;
+            whiteTimesLerpTime.A = (byte)(whiteTimesLerpTime.A * (1f - lightingColor));
+            Color faintLightingColor = whiteTimesLerpTime * lightingColor * 0.5f;
+            faintLightingColor.G = (byte)(faintLightingColor.G * lightingColor);
+            faintLightingColor.B = (byte)(faintLightingColor.R * (0.25f + lightingColor * 0.75f));
+            //Main.NewText(Projectile.ai[2]);
+            Main.EntitySpriteDraw(texture, position, sourceRectangle, backDarkColor /* lightingColor*/ * lerpTime, Projectile.rotation + direction * MathHelper.PiOver4 * -1f * (1f - percentageOfLife + 0.1f) + (Projectile.ai[2] == 1 ? MathHelper.Pi : 0), origin, scale, spriteEffects, 0f);
+            Main.EntitySpriteDraw(texture, position, sourceRectangle, faintLightingColor * 0.15f, Projectile.rotation + direction * 0.01f + (Projectile.ai[2] == 1 ? MathHelper.Pi : 0), origin, scale, spriteEffects, 0f);
+            Main.EntitySpriteDraw(texture, position, sourceRectangle, middleMediumColor /* lightingColor*/ * lerpTime * 0.3f, Projectile.rotation + (Projectile.ai[2] == 1 ? MathHelper.Pi : 0), origin, scale, spriteEffects, 0f);
+            Main.EntitySpriteDraw(texture, position, sourceRectangle, frontLightColor /* lightingColor*/ * lerpTime * 0.5f, Projectile.rotation + (Projectile.ai[2] == 1 ? MathHelper.Pi : 0), origin, scale * 0.975f, spriteEffects, 0f);
+            Main.EntitySpriteDraw(texture, position, texture.Frame(1, 4, 0, 3), Color.White * 0.6f * lerpTime, Projectile.rotation + direction * 0.01f + (Projectile.ai[2] == 1 ? MathHelper.Pi : 0), origin, scale, spriteEffects, 0f);
+            Main.EntitySpriteDraw(texture, position, texture.Frame(1, 4, 0, 3), Color.White * 0.5f * lerpTime, Projectile.rotation + direction * -0.05f + (Projectile.ai[2] == 1 ? MathHelper.Pi : 0), origin, scale * 0.8f, spriteEffects, 0f);
+            Main.EntitySpriteDraw(texture, position, texture.Frame(1, 4, 0, 3), Color.White * 0.4f * lerpTime, Projectile.rotation + direction * -0.2f + (Projectile.ai[2] == 1 ? MathHelper.Pi : 0), origin, scale * 0.6f, spriteEffects, 0f);
+
+            for (float i = 0f; i < 8f; i += 1f)
+            {
+                float edgeRotation = Projectile.rotation + direction * i * (MathHelper.Pi * -2f) * 0.025f + Utils.Remap(percentageOfLife, 0f, 1f, 0f, MathHelper.PiOver4) * direction;
+                Vector2 drawPos = position + edgeRotation.ToRotationVector2() * (texture.Width * 0.5f - 6f) * scale;
+                DrawPrettyStarSparkle(Projectile.Opacity, SpriteEffects.None, drawPos, new Color(255, 255, 255, 0) * lerpTime * (i / 9f), middleMediumColor, percentageOfLife, 0f, 0.5f, 0.5f, 1f, edgeRotation, new Vector2(0f, Utils.Remap(percentageOfLife, 0f, 1f, 3f, 0f)) * scale, Vector2.One * scale);
+            }
+
+            Vector2 drawPos2 = position + (Projectile.rotation + Utils.Remap(percentageOfLife, 0f, 1f, 0f, MathHelper.PiOver4) * direction).ToRotationVector2() * (texture.Width * 0.5f - 4f) * scale;
+            DrawPrettyStarSparkle(Projectile.Opacity, SpriteEffects.None, drawPos2, new Color(255, 255, 255, 0) * lerpTime * 0.5f, middleMediumColor, percentageOfLife, 0f, 0.5f, 0.5f, 1f, 0f, new Vector2(2f, Utils.Remap(percentageOfLife, 0f, 1f, 4f, 1f)) * scale, Vector2.One * scale);
+
+            return false;
+        }
+
+        private static void DrawPrettyStarSparkle(float opacity, SpriteEffects dir, Vector2 drawPos, Color drawColor, Color shineColor, float flareCounter, float fadeInStart, float fadeInEnd, float fadeOutStart, float fadeOutEnd, float rotation, Vector2 scale, Vector2 fatness)
+        {
+            Texture2D sparkleTexture = TextureAssets.Extra[ExtrasID.SharpTears].Value;
+            Color bigColor = shineColor * opacity * 0.5f;
+            bigColor.A = 0;
+            Vector2 origin = sparkleTexture.Size() / 2f;
+            Color smallColor = drawColor * 0.5f;
+            float lerpValue = Utils.GetLerpValue(fadeInStart, fadeInEnd, flareCounter, clamped: true) * Utils.GetLerpValue(fadeOutEnd, fadeOutStart, flareCounter, clamped: true);
+            Vector2 scaleLeftRight = new Vector2(fatness.X * 0.5f, scale.X) * lerpValue;
+            Vector2 scaleUpDown = new Vector2(fatness.Y * 0.5f, scale.Y) * lerpValue;
+            bigColor *= lerpValue;
+            smallColor *= lerpValue;
+            Main.EntitySpriteDraw(sparkleTexture, drawPos, null, bigColor, MathHelper.PiOver2 + rotation, origin, scaleLeftRight, dir);
+            Main.EntitySpriteDraw(sparkleTexture, drawPos, null, bigColor, 0f + rotation, origin, scaleUpDown, dir);
+            Main.EntitySpriteDraw(sparkleTexture, drawPos, null, smallColor, MathHelper.PiOver2 + rotation, origin, scaleLeftRight * 0.6f, dir);
+            Main.EntitySpriteDraw(sparkleTexture, drawPos, null, smallColor, 0f + rotation, origin, scaleUpDown * 0.6f, dir);
+        }
+    }
+    public class FlyingTizonaSwordPlayer : ModPlayer
+    {
+        public int TizonaattackspeedTimer = 0;
+
+        public override void ResetEffects()
+        {
+            TizonaattackspeedTimer = Math.Max(0, TizonaattackspeedTimer - 1);
+        }
+
+        public override void UpdateDead()
+        {
+            TizonaattackspeedTimer = 0;
+        }
+    }
+    class BuffsFlyingTizonaSword : ModBuff
+    {
+        public override void SetStaticDefaults()
+        {
+            Main.buffNoSave[Type] = true;
+            Main.buffNoTimeDisplay[Type] = true;
+        }
+
+        public override void Update(Player player, ref int buffIndex)
+        {
+            if (player.GetModPlayer<FlyingTizonaSwordPlayer>().TizonaattackspeedTimer > 0)
+            {
+                player.endurance += 0.15f;//加15%伤害减免
+                player.statDefense *= 1.15f;//防御力增加15%
+            }
+            
+            // 如果召唤物存在，那么延长buff时间，否则删除BUFF
+            if (player.ownedProjectileCounts[ModContent.ProjectileType<FlyingTizonaSwordProj>()] > 0)//检测玩家持有的弹幕数量
+            {
+                player.buffTime[buffIndex] = 18000;
+            }
+            else
+            {
+                player.DelBuff(buffIndex);
+                buffIndex--;
+            }
+        }
+    }
+}
